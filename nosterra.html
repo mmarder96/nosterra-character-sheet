@@ -82,18 +82,18 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
       <div class="row">
         <span data-i18n="str-u">STR</span>
         <input class="num" type="text" name="attr_strength_base" value="10">
-        <span data-i18n="per-u">PER</span>
-        <input class="num" type="text" name="attr_perception_base" value="10">
-        <span data-i18n="end-u">END</span>
-        <input class="num" type="text" name="attr_endurance_base" value="10">
-        <span data-i18n="cha-u">CHA</span>
-        <input class="num" type="text" name="attr_charisma_base" value="10">
+        <span data-i18n="dex-u">DEX</span>
+        <input class="num" type="text" name="attr_dexterity_base" value="10">
+        <span data-i18n="con-u">CON</span>
+        <input class="num" type="text" name="attr_constitution_base" value="10">
         <span data-i18n="int-u">INT</span>
         <input class="num" type="text" name="attr_intelligence_base" value="10">
-        <span data-i18n="agl-u">AGL</span>
-        <input class="num" type="text" name="attr_agility_base" value="10">
-        <span data-i18n="luk-u">LUK</span>
-        <input class="num" type="text" name="attr_luck_base" value="10">
+        <span data-i18n="wis-u">WIS</span>
+        <input class="num" type="text" name="attr_wisdom_base" value="10">
+        <span data-i18n="cha-u">CHA</span>
+        <input class="num" type="text" name="attr_charisma_base" value="10">
+        <span data-i18n="wil-u">WIL</span>
+        <input class="num" type="text" name="attr_willpower_base" value="10">
       </div>
       <div class="spacer"></div>
       <div class="row">
@@ -102,25 +102,25 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
       <div class="row">
         <span data-i18n="str-u">STR</span>
         <input class="num" type="text" name="attr_npc_str_save_base" placeholder="0">
-        <span data-i18n="per-u">PER</span>
+        <span data-i18n="dex-u">DEX</span>
         <input class="num" type="text" name="attr_npc_per_save_base" placeholder="0">
-        <span data-i18n="end-u">END</span>
+        <span data-i18n="con-u">CON</span>
         <input class="num" type="text" name="attr_npc_end_save_base" placeholder="0">
-        <span data-i18n="cha-u">CHA</span>
-        <input class="num" type="text" name="attr_npc_cha_save_base" placeholder="0">
         <span data-i18n="int-u">INT</span>
+        <input class="num" type="text" name="attr_npc_cha_save_base" placeholder="0">
+        <span data-i18n="wis-u">WIS</span>
         <input class="num" type="text" name="attr_npc_int_save_base" placeholder="0">
-        <span data-i18n="agl-u">AGL</span>
+        <span data-i18n="cha-u">CHA</span>
         <input class="num" type="text" name="attr_npc_agl_save_base" placeholder="0">
-        <span data-i18n="luk-u">LUK</span>
+        <span data-i18n="wil-u">WIL</span>
         <input class="num" type="text" name="attr_npc_luk_save_base" placeholder="0">
         <input type="hidden" name="attr_npc_str_save" value="@{strength_mod}">
-        <input type="hidden" name="attr_npc_per_save" value="@{perception_mod}">
-        <input type="hidden" name="attr_npc_end_save" value="@{endurance_mod}">
-        <input type="hidden" name="attr_npc_cha_save" value="@{charisma_mod}">
-        <input type="hidden" name="attr_npc_int_save" value="@{intelligence_mod}">
-        <input type="hidden" name="attr_npc_agl_save" value="@{agility_mod}">
-        <input type="hidden" name="attr_npc_luk_save" value="@{luck_mod}">
+        <input type="hidden" name="attr_npc_per_save" value="@{dexterity_mod}">
+        <input type="hidden" name="attr_npc_end_save" value="@{constitution_mod}">
+        <input type="hidden" name="attr_npc_cha_save" value="@{intelligence_mod}">
+        <input type="hidden" name="attr_npc_int_save" value="@{wisdom_mod}">
+        <input type="hidden" name="attr_npc_agl_save" value="@{charisma_mod}">
+        <input type="hidden" name="attr_npc_luk_save" value="@{willpower_mod}">
       </div>
       <div class="spacer"></div>
       <div class="row">
@@ -182,18 +182,18 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
           </div>
 
         </div>
-        <input type="hidden" name="attr_npc_barter" value="@{charisma_mod}">
-        <input type="hidden" name="attr_npc_energy_weapons" value="@{perception_mod}">
-        <input type="hidden" name="attr_npc_explosives" value="@{intelligence_mod}">
-        <input type="hidden" name="attr_npc_guns" value="@{perception_mod}">
-        <input type="hidden" name="attr_npc_lockpick" value="@{agility_mod}">
-        <input type="hidden" name="attr_npc_medicine" value="@{intelligence_mod}">
+        <input type="hidden" name="attr_npc_barter" value="@{intelligence_mod}">
+        <input type="hidden" name="attr_npc_energy_weapons" value="@{dexterity_mod}">
+        <input type="hidden" name="attr_npc_explosives" value="@{wisdom_mod}">
+        <input type="hidden" name="attr_npc_guns" value="@{dexterity_mod}">
+        <input type="hidden" name="attr_npc_lockpick" value="@{charisma_mod}">
+        <input type="hidden" name="attr_npc_medicine" value="@{wisdom_mod}">
         <input type="hidden" name="attr_npc_melee_weapons" value="@{strength_mod}">
-        <input type="hidden" name="attr_npc_repair" value="@{intelligence_mod}">
-        <input type="hidden" name="attr_npc_science" value="@{intelligence_mod}">
-        <input type="hidden" name="attr_npc_sneak" value="@{agility_mod}">
-        <input type="hidden" name="attr_npc_speech" value="@{charisma_mod}">
-        <input type="hidden" name="attr_npc_survival" value="@{intelligence_mod}">
+        <input type="hidden" name="attr_npc_repair" value="@{wisdom_mod}">
+        <input type="hidden" name="attr_npc_science" value="@{wisdom_mod}">
+        <input type="hidden" name="attr_npc_sneak" value="@{charisma_mod}">
+        <input type="hidden" name="attr_npc_speech" value="@{intelligence_mod}">
+        <input type="hidden" name="attr_npc_survival" value="@{wisdom_mod}">
         <input type="hidden" name="attr_npc_unarmed" value="@{strength_mod}">
       </div>
       <div class="row">
@@ -214,7 +214,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
       </div>
       <div class="row">
         <span data-i18n="senses-u">SENSES</span>
-        <input type="text" name="attr_npc_senses" placeholder="darkvision 120ft., passive Perception 16" data-i18n-placeholder="npc-senses-place">
+        <input type="text" name="attr_npc_senses" placeholder="darkvision 120ft., passive Dexterity 16" data-i18n-placeholder="npc-senses-place">
       </div>
       <div class="row">
         <span data-i18n="langs-u">LANGUAGES</span>
@@ -261,13 +261,13 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
         </select>
       </div>
       <div class="row">
-        <input type="checkbox" name="attr_init_tiebreaker" value="@{agility}/100">
-        <span data-i18n="add-agl-tiebreaker-u">ADD AGL TIEBREAKER TO INITIATIVE</span>
+        <input type="checkbox" name="attr_init_tiebreaker" value="@{charisma}/100">
+        <span data-i18n="add-agl-tiebreaker-u">ADD CHA TIEBREAKER TO INITIATIVE</span>
       </div>
     </div>
     <div class="display stat-block">
       <div class="row title red">
-        <button type="roll" name="roll_npc_init" style="width: 100%;" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{init}}} {{mod=[[[[@{initiative_bonus}]][AGL]]]}} {{r1=[[@{d20}+[[@{initiative_bonus}]][AGL] &{tracker}]]}} {{normal=1}} {{type=Initiative}}">
+        <button type="roll" name="roll_npc_init" style="width: 100%;" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{init}}} {{mod=[[[[@{initiative_bonus}]][CHA]]]}} {{r1=[[@{d20}+[[@{initiative_bonus}]][CHA] &{tracker}]]}} {{normal=1}} {{type=Initiative}}">
           <span name="attr_npc_name"></span>
         </button>
       </div>
@@ -279,7 +279,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
         <span data-i18n="hp" class="bold">Hit Points</span>
         <span class="num3" name="attr_hp_max"></span>
         <button type="roll" name="roll_npc_init" style="position: absolute; right: 5px; height: 30px; width: 20px;"
-          value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{init}}} {{mod=[[[[@{initiative_bonus}]][AGL]]]}} {{r1=[[@{d20}+[[@{initiative_bonus}]][AGL] &{tracker}]]}} {{normal=1}} {{type=Initiative}}">
+          value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{init}}} {{mod=[[[[@{initiative_bonus}]][CHA]]]}} {{r1=[[@{d20}+[[@{initiative_bonus}]][CHA] &{tracker}]]}} {{normal=1}} {{type=Initiative}}">
           <span class="npc-init-die">t</span>
           <span style="display: block;">INIT</span>
         </button>
@@ -311,56 +311,56 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
         </div>
         <div class="attr-container">
           <button type="roll" name="roll_npc_per"
-            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{perception}}} {{mod=[[[[@{perception_mod}]][STR]]]}} {{r1=[[@{d20}+[[@{perception_mod}]][STR]]]}} @{rtype}+[[@{perception_mod}]][STR]]]}} {{type=Ability}}">
-            <span class="bold" data-i18n="per-u">PER</span>
-            <span name="attr_perception"></span>
+            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{dexterity}}} {{mod=[[[[@{dexterity_mod}]][STR]]]}} {{r1=[[@{d20}+[[@{dexterity_mod}]][STR]]]}} @{rtype}+[[@{dexterity_mod}]][STR]]]}} {{type=Ability}}">
+            <span class="bold" data-i18n="dex-u">DEX</span>
+            <span name="attr_dexterity"></span>
             <input class="negativeflag" type="hidden" name="attr_npc_per_negative" value="0">
-            <span class="npcattr" name="attr_perception_mod"></span>
+            <span class="npcattr" name="attr_dexterity_mod"></span>
           </button>
         </div>
         <div class="attr-container">
           <button type="roll" name="roll_npc_end"
-            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{endurance}}} {{mod=[[[[@{endurance_mod}]][END]]]}} {{r1=[[@{d20}+[[@{endurance_mod}]][END]]]}} @{rtype}+[[@{endurance_mod}]][END]]]}} {{type=Ability}}">
-            <span class="bold" data-i18n="end-u">END</span>
-            <span name="attr_endurance"></span>
+            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{constitution}}} {{mod=[[[[@{constitution_mod}]][CON]]]}} {{r1=[[@{d20}+[[@{constitution_mod}]][CON]]]}} @{rtype}+[[@{constitution_mod}]][CON]]]}} {{type=Ability}}">
+            <span class="bold" data-i18n="con-u">CON</span>
+            <span name="attr_constitution"></span>
             <input class="negativeflag" type="hidden" name="attr_npc_end_negative" value="0">
-            <span class="npcattr" name="attr_endurance_mod"></span>
+            <span class="npcattr" name="attr_constitution_mod"></span>
           </button>
         </div>
         <div class="attr-container">
           <button type="roll" name="roll_npc_cha"
-            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{charisma}}} {{mod=[[[[@{charisma_mod}]][CHA]]]}} {{r1=[[@{d20}+[[@{charisma_mod}]][CHA]]]}} @{rtype}+[[@{charisma_mod}]][CHA]]]}} {{type=Ability}}">
-            <span class="bold" data-i18n="cha-u">CHA</span>
-            <span name="attr_charisma"></span>
-            <input class="negativeflag" type="hidden" name="attr_npc_cha_negative" value="0">
-            <span class="npcattr" name="attr_charisma_mod"></span>
-          </button>
-        </div>
-        <div class="attr-container">
-          <button type="roll" name="roll_npc_int"
             value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{intelligence}}} {{mod=[[[[@{intelligence_mod}]][INT]]]}} {{r1=[[@{d20}+[[@{intelligence_mod}]][INT]]]}} @{rtype}+[[@{intelligence_mod}]][INT]]]}} {{type=Ability}}">
             <span class="bold" data-i18n="int-u">INT</span>
             <span name="attr_intelligence"></span>
-            <input class="negativeflag" type="hidden" name="attr_npc_int_negative" value="0">
+            <input class="negativeflag" type="hidden" name="attr_npc_cha_negative" value="0">
             <span class="npcattr" name="attr_intelligence_mod"></span>
           </button>
         </div>
         <div class="attr-container">
+          <button type="roll" name="roll_npc_int"
+            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{wisdom}}} {{mod=[[[[@{wisdom_mod}]][WIS]]]}} {{r1=[[@{d20}+[[@{wisdom_mod}]][WIS]]]}} @{rtype}+[[@{wisdom_mod}]][WIS]]]}} {{type=Ability}}">
+            <span class="bold" data-i18n="wis-u">WIS</span>
+            <span name="attr_wisdom"></span>
+            <input class="negativeflag" type="hidden" name="attr_npc_int_negative" value="0">
+            <span class="npcattr" name="attr_wisdom_mod"></span>
+          </button>
+        </div>
+        <div class="attr-container">
           <button type="roll" name="roll_npc_agl"
-            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{agility}}} {{mod=[[[[@{agility_mod}]][AGL]]]}} {{r1=[[@{d20}+[[@{agility_mod}]][AGL]]]}} @{rtype}+[[@{agility_mod}]][AGL]]]}} {{type=Ability}}">
-            <span class="bold" data-i18n="agl-u">AGL</span>
-            <span name="attr_agility"></span>
+            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{charisma}}} {{mod=[[[[@{charisma_mod}]][CHA]]]}} {{r1=[[@{d20}+[[@{charisma_mod}]][CHA]]]}} @{rtype}+[[@{charisma_mod}]][CHA]]]}} {{type=Ability}}">
+            <span class="bold" data-i18n="cha-u">CHA</span>
+            <span name="attr_charisma"></span>
             <input class="negativeflag" type="hidden" name="attr_npc_agl_negative" value="0">
-            <span class="npcattr" name="attr_agility_mod"></span>
+            <span class="npcattr" name="attr_charisma_mod"></span>
           </button>
         </div>
         <div class="attr-container">
           <button type="roll" name="roll_npc_luk"
-            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{luck}}} {{mod=[[[[@{luck_mod}]][LUK]]]}} {{r1=[[@{d20}+[[@{luck_mod}]][LUK]]]}} @{rtype}+[[@{luck_mod}]][LUK]]]}} {{type=Ability}}">
-            <span class="bold" data-i18n="luk-u">LUK</span>
-            <span name="attr_luck"></span>
+            value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{willpower}}} {{mod=[[[[@{willpower_mod}]][WIL]]]}} {{r1=[[@{d20}+[[@{willpower_mod}]][WIL]]]}} @{rtype}+[[@{willpower_mod}]][WIL]]]}} {{type=Ability}}">
+            <span class="bold" data-i18n="wil-u">WIL</span>
+            <span name="attr_willpower"></span>
             <input class="negativeflag" type="hidden" name="attr_npc_luk_negative" value="0">
-            <span class="npcattr" name="attr_luck_mod"></span>
+            <span class="npcattr" name="attr_willpower_mod"></span>
           </button>
         </div>
       </div>
@@ -374,32 +374,32 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
           <span class="stat" name="attr_npc_str_save"></span>
         </button>
         <input class="flag" type="hidden" name="attr_npc_per_save_flag" value="0">
-        <button type="roll" name="roll_npc_per_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{perception-save}}} {{mod=[[[[@{npc_per_save}]][PER SAVE]]]}} {{r1=[[@{d20}+[[@{npc_per_save}]][PER SAVE]]]}} @{rtype}+[[@{npc_per_save}]][PER SAVE]]]}} {{type=Save}}">
+        <button type="roll" name="roll_npc_per_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{dexterity-save}}} {{mod=[[[[@{npc_per_save}]][DEX SAVE]]]}} {{r1=[[@{d20}+[[@{npc_per_save}]][DEX SAVE]]]}} @{rtype}+[[@{npc_per_save}]][DEX SAVE]]]}} {{type=Save}}">
           <span data-i18n="per">Per</span>
           <span class="stat" name="attr_npc_per_save"></span>
         </button>
         <input class="flag" type="hidden" name="attr_npc_end_save_flag" value="0">
-        <button type="roll" name="roll_npc_end_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{endurance-save}}} {{mod=[[[[@{npc_end_save}]][END SAVE]]]}} {{r1=[[@{d20}+[[@{npc_end_save}]][END SAVE]]]}} @{rtype}+[[@{npc_end_save}]][END SAVE]]]}} {{type=Save}}">
+        <button type="roll" name="roll_npc_end_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{constitution-save}}} {{mod=[[[[@{npc_end_save}]][CON SAVE]]]}} {{r1=[[@{d20}+[[@{npc_end_save}]][CON SAVE]]]}} @{rtype}+[[@{npc_end_save}]][CON SAVE]]]}} {{type=Save}}">
           <span data-i18n="end">End</span>
           <span class="stat" name="attr_npc_end_save"></span>
         </button>
         <input class="flag" type="hidden" name="attr_npc_cha_save_flag" value="0">
-        <button type="roll" name="roll_npc_cha_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{charisma-save}}} {{mod=[[[[@{npc_cha_save}]][CHA SAVE]]]}} {{r1=[[@{d20}+[[@{npc_cha_save}]][CHA SAVE]]]}} @{rtype}+[[@{npc_cha_save}]][CHA SAVE]]]}} {{type=Save}}">
+        <button type="roll" name="roll_npc_cha_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{intelligence-save}}} {{mod=[[[[@{npc_cha_save}]][INT SAVE]]]}} {{r1=[[@{d20}+[[@{npc_cha_save}]][INT SAVE]]]}} @{rtype}+[[@{npc_cha_save}]][INT SAVE]]]}} {{type=Save}}">
           <span data-i18n="cha">Cha</span>
           <span class="stat" name="attr_npc_cha_save"></span>
         </button>
         <input class="flag" type="hidden" name="attr_npc_int_save_flag" value="0">
-        <button type="roll" name="roll_npc_int_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{intelligence-save}}} {{mod=[[[[@{npc_int_save}]][INT SAVE]]]}} {{r1=[[@{d20}+[[@{npc_int_save}]][INT SAVE]]]}} @{rtype}+[[@{npc_int_save}]][INT SAVE]]]}} {{type=Save}}">
+        <button type="roll" name="roll_npc_int_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{wisdom-save}}} {{mod=[[[[@{npc_int_save}]][WIS SAVE]]]}} {{r1=[[@{d20}+[[@{npc_int_save}]][WIS SAVE]]]}} @{rtype}+[[@{npc_int_save}]][WIS SAVE]]]}} {{type=Save}}">
           <span data-i18n="int">Int</span>
           <span class="stat" name="attr_npc_int_save"></span>
         </button>
         <input class="flag" type="hidden" name="attr_npc_agl_save_flag" value="0">
-        <button type="roll" name="roll_npc_agl_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{agility-save}}} {{mod=[[[[@{npc_agl_save}]][AGL SAVE]]]}} {{r1=[[@{d20}+[[@{npc_agl_save}]][AGL SAVE]]]}} @{rtype}+[[@{npc_agl_save}]][AGL SAVE]]]}} {{type=Save}}">
+        <button type="roll" name="roll_npc_agl_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{charisma-save}}} {{mod=[[[[@{npc_agl_save}]][CHA SAVE]]]}} {{r1=[[@{d20}+[[@{npc_agl_save}]][CHA SAVE]]]}} @{rtype}+[[@{npc_agl_save}]][CHA SAVE]]]}} {{type=Save}}">
           <span data-i18n="agl">Agl</span>
           <span class="stat" name="attr_npc_agl_save"></span>
         </button>
         <input class="flag" type="hidden" name="attr_npc_luk_save_flag" value="0">
-        <button type="roll" name="roll_npc_luk_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{luck-save}}} {{mod=[[[[@{npc_luk_save}]][LUK SAVE]]]}} {{r1=[[@{d20}+[[@{npc_luk_save}]][LUK SAVE]]]}} @{rtype}+[[@{npc_luk_save}]][LUK SAVE]]]}} {{type=Save}}">
+        <button type="roll" name="roll_npc_luk_save" value="@{wtype}&{template:simple} @{npc_name_flag} {{rname=^{willpower-save}}} {{mod=[[[[@{npc_luk_save}]][WIL SAVE]]]}} {{r1=[[@{d20}+[[@{npc_luk_save}]][WIL SAVE]]]}} @{rtype}+[[@{npc_luk_save}]][WIL SAVE]]]}} {{type=Save}}">
           <span data-i18n="luk">Luk</span>
           <span class="stat" name="attr_npc_luk_save"></span>
         </button>
@@ -803,45 +803,33 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               </div>
             </div>
             <div id="per-container" class="attr-container">
-              <button type="roll" name="roll_perception"
-                value="@{wtype}&{template:simple} {{rname=^{perception-u}}} {{mod=@{perception_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{perception_mod}@{jack_attr}[PER]]]}} @{rtype}+@{perception_mod}@{jack_attr}[PER]]]}} @{charname_output}"
-                data-i18n="perception-u">PERCEPTION</button>
-              <span class="attr" name="attr_perception_mod" title="@{perception_mod}">0</span>
+              <button type="roll" name="roll_dexterity"
+                value="@{wtype}&{template:simple} {{rname=^{dexterity-u}}} {{mod=@{dexterity_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{dexterity_mod}@{jack_attr}[DEX]]]}} @{rtype}+@{dexterity_mod}@{jack_attr}[DEX]]]}} @{charname_output}"
+                data-i18n="dexterity-u">PERCEPTION</button>
+              <span class="attr" name="attr_dexterity_mod" title="@{dexterity_mod}">0</span>
               <div class="attr-mod">
-                <input class="baseattr" type="text" name="attr_perception_base" title="@{perception}" value="10">
-                <input type="hidden" name="attr_perception" value="10">
-                <input class="attr-flag" type="hidden" name="attr_perception_flag" value="0">
-                <span class="finalattr" name="attr_perception"></span>
+                <input class="baseattr" type="text" name="attr_dexterity_base" title="@{dexterity}" value="10">
+                <input type="hidden" name="attr_dexterity" value="10">
+                <input class="attr-flag" type="hidden" name="attr_dexterity_flag" value="0">
+                <span class="finalattr" name="attr_dexterity"></span>
               </div>
             </div>
             <div id="end-container" class="attr-container">
-              <button type="roll" name="roll_endurance"
-                value="@{wtype}&{template:simple} {{rname=^{endurance-u}}} {{mod=@{endurance_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{endurance_mod}@{jack_attr}[END]]]}} @{rtype}+@{endurance_mod}@{jack_attr}[END]]]}} @{charname_output}"
-                data-i18n="endurance-u">ENDURANCE</button>
-              <span class="attr" name="attr_endurance_mod" title="@{endurance_mod}">0</span>
+              <button type="roll" name="roll_constitution"
+                value="@{wtype}&{template:simple} {{rname=^{constitution-u}}} {{mod=@{constitution_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{constitution_mod}@{jack_attr}[CON]]]}} @{rtype}+@{constitution_mod}@{jack_attr}[CON]]]}} @{charname_output}"
+                data-i18n="constitution-u">ENDURANCE</button>
+              <span class="attr" name="attr_constitution_mod" title="@{constitution_mod}">0</span>
               <div class="attr-mod">
-                <input class="baseattr" type="text" name="attr_endurance_base" title="@{endurance}" value="10">
-                <input type="hidden" name="attr_endurance" value="10">
-                <input class="attr-flag" type="hidden" name="attr_endurance_flag" value="0">
-                <span class="finalattr" name="attr_endurance"></span>
+                <input class="baseattr" type="text" name="attr_constitution_base" title="@{constitution}" value="10">
+                <input type="hidden" name="attr_constitution" value="10">
+                <input class="attr-flag" type="hidden" name="attr_constitution_flag" value="0">
+                <span class="finalattr" name="attr_constitution"></span>
               </div>
             </div>
             <div id="cha-container" class="attr-container">
-              <button type="roll" name="roll_charisma"
-                value="@{wtype}&{template:simple} {{rname=^{charisma-u}}} {{mod=@{charisma_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{rtype}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{charname_output}"
-                data-i18n="charisma-u">CHARISMA</button>
-              <span class="attr" name="attr_charisma_mod" title="@{charisma_mod}">0</span>
-              <div class="attr-mod">
-                <input class="baseattr" type="text" name="attr_charisma_base" title="@{charisma}" value="10">
-                <input type="hidden" name="attr_charisma" value="10">
-                <input class="attr-flag" type="hidden" name="attr_charisma_flag" value="0">
-                <span class="finalattr" name="attr_charisma"></span>
-              </div>
-            </div>
-            <div id="int-container" class="attr-container">
               <button type="roll" name="roll_intelligence"
                 value="@{wtype}&{template:simple} {{rname=^{intelligence-u}}} {{mod=@{intelligence_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{rtype}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{charname_output}"
-                data-i18n="intelligence-u">INTELLIGENCE</button>
+                data-i18n="intelligence-u">CHARISMA</button>
               <span class="attr" name="attr_intelligence_mod" title="@{intelligence_mod}">0</span>
               <div class="attr-mod">
                 <input class="baseattr" type="text" name="attr_intelligence_base" title="@{intelligence}" value="10">
@@ -850,27 +838,39 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                 <span class="finalattr" name="attr_intelligence"></span>
               </div>
             </div>
-            <div id="agl-container" class="attr-container">
-              <button type="roll" name="roll_agility"
-                value="@{wtype}&{template:simple} {{rname=^{agility-u}}} {{mod=@{agility_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{agility_mod}@{jack_attr}[AGL]]]}} @{rtype}+@{agility_mod}@{jack_attr}[AGL]]]}} @{charname_output}"
-                data-i18n="agility-u">AGILITY</button>
-              <span class="attr" name="attr_agility_mod" title="@{agility_mod}">0</span>
+            <div id="int-container" class="attr-container">
+              <button type="roll" name="roll_wisdom"
+                value="@{wtype}&{template:simple} {{rname=^{wisdom-u}}} {{mod=@{wisdom_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{rtype}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{charname_output}"
+                data-i18n="wisdom-u">INTELLIGENCE</button>
+              <span class="attr" name="attr_wisdom_mod" title="@{wisdom_mod}">0</span>
               <div class="attr-mod">
-                <input class="baseattr" type="text" name="attr_agility_base" title="@{agility}" value="10">
-                <input type="hidden" name="attr_agility" value="10">
-                <input class="attr-flag" type="hidden" name="attr_agility_flag" value="0">
-                <span class="finalattr" name="attr_agility"></span>
+                <input class="baseattr" type="text" name="attr_wisdom_base" title="@{wisdom}" value="10">
+                <input type="hidden" name="attr_wisdom" value="10">
+                <input class="attr-flag" type="hidden" name="attr_wisdom_flag" value="0">
+                <span class="finalattr" name="attr_wisdom"></span>
+              </div>
+            </div>
+            <div id="agl-container" class="attr-container">
+              <button type="roll" name="roll_charisma"
+                value="@{wtype}&{template:simple} {{rname=^{charisma-u}}} {{mod=@{charisma_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{rtype}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{charname_output}"
+                data-i18n="charisma-u">AGILITY</button>
+              <span class="attr" name="attr_charisma_mod" title="@{charisma_mod}">0</span>
+              <div class="attr-mod">
+                <input class="baseattr" type="text" name="attr_charisma_base" title="@{charisma}" value="10">
+                <input type="hidden" name="attr_charisma" value="10">
+                <input class="attr-flag" type="hidden" name="attr_charisma_flag" value="0">
+                <span class="finalattr" name="attr_charisma"></span>
               </div>
             </div>
             <div id="luk-container" class="attr-container">
-              <button type="roll" name="roll_luck" value="@{wtype}&{template:simple} {{rname=^{luck-u}}} {{mod=@{luck_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{luck_mod}@{jack_attr}[LUK]]]}} @{rtype}+@{luck_mod}@{jack_attr}[LUK]]]}} @{charname_output}"
-                data-i18n="luck-u">LUCK</button>
-              <span class="attr" name="attr_luck_mod" title="@{luck_mod}">0</span>
+              <button type="roll" name="roll_willpower" value="@{wtype}&{template:simple} {{rname=^{willpower-u}}} {{mod=@{willpower_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{willpower_mod}@{jack_attr}[WIL]]]}} @{rtype}+@{willpower_mod}@{jack_attr}[WIL]]]}} @{charname_output}"
+                data-i18n="willpower-u">LUCK</button>
+              <span class="attr" name="attr_willpower_mod" title="@{willpower_mod}">0</span>
               <div class="attr-mod">
-                <input class="baseattr" type="text" name="attr_luck_base" title="@{luck}" value="10">
-                <input type="hidden" name="attr_luck" value="10">
-                <input class="attr-flag" type="hidden" name="attr_luck_flag" value="0">
-                <span class="finalattr" name="attr_luck"></span>
+                <input class="baseattr" type="text" name="attr_willpower_base" title="@{willpower}" value="10">
+                <input type="hidden" name="attr_willpower" value="10">
+                <input class="attr-flag" type="hidden" name="attr_willpower_flag" value="0">
+                <span class="finalattr" name="attr_willpower"></span>
               </div>
             </div>
           </div>
@@ -914,42 +914,42 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                   <span name="attr_barter_bonus" title="@{barter_bonus}">0</span>
                   <button type="roll" name="roll_barter"
                     value="@{wtype}&{template:simple} {{rname=^{barter-u}}} {{mod=@{barter_check_bonus}}} {{r1=[[@{d20}+@{barter_check_bonus}]]}} @{rtype}+@{barter_check_bonus}}]]}} {{global=@{global_skill_mod}}} @{charname_output}"
-                    data-i18n="barter-core">Barter <span>[CHA]</span></button>
+                    data-i18n="barter-core">Barter <span>[INT]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="energy_weapons">
                   <input type="checkbox" name="attr_energy_weapons_prof" title="@{energy_weapons_prof}" value="(@{pb})">
                   <span name='attr_energy_weapons_bonus' title='@{energy_weapons_bonus}'>0</span>
                   <button type='roll' name='roll_energy_weapons'
                     value='@{wtype}&{template:simple} {{rname=^{energy_weapons-u}}} {{mod=@{energy_weapons_check_bonus}}} {{r1=[[@{d20}+@{energy_weapons_check_bonus}]]}} @{rtype}+@{energy_weapons_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='energy_weapons-core'>Energy Weapons <span>[PER]</span></button>
+                    data-i18n='energy_weapons-core'>Energy Weapons <span>[DEX]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="explosives">
                   <input type="checkbox" name="attr_explosives_prof" title="@{explosives_prof}" value="(@{pb})">
                   <span name='attr_explosives_bonus' title='@{explosives_bonus}'>0</span>
                   <button type='roll' name='roll_explosives'
                     value='@{wtype}&{template:simple} {{rname=^{explosives-u}}} {{mod=@{explosives_check_bonus}}} {{r1=[[@{d20}+@{explosives_check_bonus}]]}} @{rtype}+@{explosives_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='explosives-core'>Explosives <span>[INT]</span></button>
+                    data-i18n='explosives-core'>Explosives <span>[WIS]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="guns">
                   <input type="checkbox" name="attr_guns_prof" title="@{guns_prof}" value="(@{pb})">
                   <span name='attr_guns_bonus' title='@{guns_bonus}'>0</span>
                   <button type='roll' name='roll_guns'
                     value='@{wtype}&{template:simple} {{rname=^{guns-u}}} {{mod=@{guns_check_bonus}}} {{r1=[[@{d20}+@{guns_check_bonus}]]}} @{rtype}+@{guns_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='guns-core'>Guns <span>[PER]</span></button>
+                    data-i18n='guns-core'>Guns <span>[DEX]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="lockpick">
                   <input type="checkbox" name="attr_lockpick_prof" title="@{lockpick_prof}" value="(@{pb})">
                   <span name='attr_lockpick_bonus' title='@{lockpick_bonus}'>0</span>
                   <button type='roll' name='roll_lockpick'
                     value='@{wtype}&{template:simple} {{rname=^{lockpick-u}}} {{mod=@{lockpick_check_bonus}}} {{r1=[[@{d20}+@{lockpick_check_bonus}]]}} @{rtype}+@{lockpick_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='lockpick-core'>Lockpick <span>[AGL]</span></button>
+                    data-i18n='lockpick-core'>Lockpick <span>[CHA]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="medicine">
                   <input type="checkbox" name="attr_medicine_prof" title="@{medicine_prof}" value="(@{pb})">
                   <span name='attr_medicine_bonus' title='@{medicine_bonus}'>0</span>
                   <button type='roll' name='roll_medicine'
                     value='@{wtype}&{template:simple} {{rname=^{medicine-u}}} {{mod=@{medicine_check_bonus}}} {{r1=[[@{d20}+@{medicine_check_bonus}]]}} @{rtype}+@{medicine_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='medicine-core'>Medicine <span>[INT]</span></button>
+                    data-i18n='medicine-core'>Medicine <span>[WIS]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="melee_weapons">
                   <input type="checkbox" name="attr_melee_weapons_prof" title="@{melee_weapons_prof}" value="(@{pb})">
@@ -963,35 +963,35 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                   <span name='attr_repair_bonus' title='@{repair_bonus}'>0</span>
                   <button type='roll' name='roll_repair'
                     value='@{wtype}&{template:simple} {{rname=^{repair-u}}} {{mod=@{repair_check_bonus}}} {{r1=[[@{d20}+@{repair_check_bonus}]]}} @{rtype}+@{repair_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='repair-core'>Repair <span>[INT]</span></button>
+                    data-i18n='repair-core'>Repair <span>[WIS]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="science">
                   <input type="checkbox" name="attr_science_prof" title="@{science_prof}" value="(@{pb})">
                   <span name='attr_science_bonus' title='@{science_bonus}'>0</span>
                   <button type='roll' name='roll_science'
                     value='@{wtype}&{template:simple} {{rname=^{science-u}}} {{mod=@{science_check_bonus}}} {{r1=[[@{d20}+@{science_check_bonus}]]}} @{rtype}+@{science_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='science-core'>Science <span>[INT]</span></button>
+                    data-i18n='science-core'>Science <span>[WIS]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="sneak">
                   <input type="checkbox" name="attr_sneak_prof" title="@{sneak_prof}" value="(@{pb})">
                   <span name='attr_sneak_bonus' title='@{sneak_bonus}'>0</span>
                   <button type='roll' name='roll_sneak'
                     value='@{wtype}&{template:simple} {{rname=^{sneak-u}}} {{mod=@{sneak_check_bonus}}} {{r1=[[@{d20}+@{sneak_check_bonus}]]}} @{rtype}+@{sneak_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='sneak-core'>Sneak <span>[AGL]</span></button>
+                    data-i18n='sneak-core'>Sneak <span>[CHA]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="speech">
                   <input type="checkbox" name="attr_speech_prof" title="@{speech_prof}" value="(@{pb})">
                   <span name='attr_speech_bonus' title='@{speech_bonus}'>0</span>
                   <button type='roll' name='roll_speech'
                     value='@{wtype}&{template:simple} {{rname=^{speech-u}}} {{mod=@{speech_check_bonus}}} {{r1=[[@{d20}+@{speech_check_bonus}]]}} @{rtype}+@{speech_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='speech-core'>Speech <span>[CHA]</span></button>
+                    data-i18n='speech-core'>Speech <span>[INT]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="survival">
                   <input type="checkbox" name="attr_survival_prof" title="@{survival_prof}" value="(@{pb})">
                   <span name='attr_survival_bonus' title='@{survival_bonus}'>0</span>
                   <button type='roll' name='roll_survival'
                     value='@{wtype}&{template:simple} {{rname=^{survival-u}}} {{mod=@{survival_check_bonus}}} {{r1=[[@{d20}+@{survival_check_bonus}]]}} @{rtype}+@{survival_check_bonus}]]}} {{global=@{global_skill_mod}}} @{charname_output}'
-                    data-i18n='survival-core'>Survival <span>[INT]</span></button>
+                    data-i18n='survival-core'>Survival <span>[WIS]</span></button>
                 </div>
                 <div class="skill" data-i18n-list-item="unarmed">
                   <input type="checkbox" name="attr_unarmed_prof" title="@{unarmed_prof}" value="(@{pb})">
@@ -1038,25 +1038,18 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                   data-i18n="strength">Strength</button>
               </div>
               <div class="saving-throw">
-                <input type="checkbox" name="attr_perception_save_prof" title="@{perception_save_prof}" value="(@{pb})">
-                <span name="attr_perception_save_bonus" title="@{perception_save_bonus}">0</span>
-                <button type="roll" name="roll_perception_save"
-                  value="@{wtype}&{template:simple} {{rname=^{perception-save-u}}} {{mod=@{perception_save_bonus}}} {{r1=[[@{d20}+@{perception_save_bonus}]]}} @{rtype}+@{perception_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
-                  data-i18n="perception">Perception</button>
+                <input type="checkbox" name="attr_dexterity_save_prof" title="@{dexterity_save_prof}" value="(@{pb})">
+                <span name="attr_dexterity_save_bonus" title="@{dexterity_save_bonus}">0</span>
+                <button type="roll" name="roll_dexterity_save"
+                  value="@{wtype}&{template:simple} {{rname=^{dexterity-save-u}}} {{mod=@{dexterity_save_bonus}}} {{r1=[[@{d20}+@{dexterity_save_bonus}]]}} @{rtype}+@{dexterity_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
+                  data-i18n="dexterity">Dexterity</button>
               </div>
               <div class="saving-throw">
-                <input type="checkbox" name="attr_endurance_save_prof" title="@{endurance_save_prof}" value="(@{pb})">
-                <span name="attr_endurance_save_bonus" title="@{endurance_save_bonus}">0</span>
-                <button type="roll" name="roll_endurance_save"
-                  value="@{wtype}&{template:simple} {{rname=^{endurance-save-u}}} {{mod=@{endurance_save_bonus}}} {{r1=[[@{d20}+@{endurance_save_bonus}]]}} @{rtype}+@{endurance_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
-                  data-i18n="endurance">Endurance</button>
-              </div>
-              <div class="saving-throw">
-                <input type="checkbox" name="attr_charisma_save_prof" title="@{charisma_save_prof}" value="(@{pb})">
-                <span name="attr_charisma_save_bonus" title="@{charisma_save_bonus}">0</span>
-                <button type="roll" name="roll_charisma_save"
-                  value="@{wtype}&{template:simple} {{rname=^{charisma-save-u}}} {{mod=@{charisma_save_bonus}}} {{r1=[[@{d20}+@{charisma_save_bonus}]]}} @{rtype}+@{charisma_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
-                  data-i18n="charisma">Charisma</button>
+                <input type="checkbox" name="attr_constitution_save_prof" title="@{constitution_save_prof}" value="(@{pb})">
+                <span name="attr_constitution_save_bonus" title="@{constitution_save_bonus}">0</span>
+                <button type="roll" name="roll_constitution_save"
+                  value="@{wtype}&{template:simple} {{rname=^{constitution-save-u}}} {{mod=@{constitution_save_bonus}}} {{r1=[[@{d20}+@{constitution_save_bonus}]]}} @{rtype}+@{constitution_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
+                  data-i18n="constitution">Constitution</button>
               </div>
               <div class="saving-throw">
                 <input type="checkbox" name="attr_intelligence_save_prof" title="@{intelligence_save_prof}" value="(@{pb})">
@@ -1066,18 +1059,25 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                   data-i18n="intelligence">Intelligence</button>
               </div>
               <div class="saving-throw">
-                <input type="checkbox" name="attr_agility_save_prof" title="@{agility_save_prof}" value="(@{pb})">
-                <span name="attr_agility_save_bonus" title="@{agility_save_bonus}">0</span>
-                <button type="roll" name="roll_agility_save"
-                  value="@{wtype}&{template:simple} {{rname=^{agility-save-u}}} {{mod=@{agility_save_bonus}}} {{r1=[[@{d20}+@{agility_save_bonus}]]}} @{rtype}+@{agility_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
-                  data-i18n="agility">Agility</button>
+                <input type="checkbox" name="attr_wisdom_save_prof" title="@{wisdom_save_prof}" value="(@{pb})">
+                <span name="attr_wisdom_save_bonus" title="@{wisdom_save_bonus}">0</span>
+                <button type="roll" name="roll_wisdom_save"
+                  value="@{wtype}&{template:simple} {{rname=^{wisdom-save-u}}} {{mod=@{wisdom_save_bonus}}} {{r1=[[@{d20}+@{wisdom_save_bonus}]]}} @{rtype}+@{wisdom_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
+                  data-i18n="wisdom">Wisdom</button>
               </div>
               <div class="saving-throw">
-                <input type="checkbox" name="attr_luck_save_prof" title="@{luck_save_prof}" value="(@{pb})">
-                <span name="attr_luck_save_bonus" title="@{luck_save_bonus}">0</span>
-                <button type="roll" name="roll_luck_save"
-                  value="@{wtype}&{template:simple} {{rname=^{luck-save-u}}} {{mod=@{luck_save_bonus}}} {{r1=[[@{d20}+@{luck_save_bonus}]]}} @{rtype}+@{luck_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
-                  data-i18n="luck">Luck</button>
+                <input type="checkbox" name="attr_charisma_save_prof" title="@{charisma_save_prof}" value="(@{pb})">
+                <span name="attr_charisma_save_bonus" title="@{charisma_save_bonus}">0</span>
+                <button type="roll" name="roll_charisma_save"
+                  value="@{wtype}&{template:simple} {{rname=^{charisma-save-u}}} {{mod=@{charisma_save_bonus}}} {{r1=[[@{d20}+@{charisma_save_bonus}]]}} @{rtype}+@{charisma_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
+                  data-i18n="charisma">Charisma</button>
+              </div>
+              <div class="saving-throw">
+                <input type="checkbox" name="attr_willpower_save_prof" title="@{willpower_save_prof}" value="(@{pb})">
+                <span name="attr_willpower_save_bonus" title="@{willpower_save_bonus}">0</span>
+                <button type="roll" name="roll_willpower_save"
+                  value="@{wtype}&{template:simple} {{rname=^{willpower-save-u}}} {{mod=@{willpower_save_bonus}}} {{r1=[[@{d20}+@{willpower_save_bonus}]]}} @{rtype}+@{willpower_save_bonus}]]}} {{global=@{global_save_mod}}} @{charname_output}"
+                  data-i18n="willpower">Willpower</button>
               </div>
               <!-- <input type="hidden" class="toggleflag" name="attr_global_save_mod_flag">
               <div class="hidden textarea globalattack">
@@ -1347,12 +1347,12 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     <span style="width: 5px">+</span>
                     <select name="attr_atkattr" style="width: 25px">
                       <option value="@{strength_mod}" selected="selected" data-i18n="str-u">STR</option>
-                      <option value="@{perception_mod}" data-i18n="per-u">PER</option>
-                      <option value="@{endurance_mod}" data-i18n="end-u">END</option>
-                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{dexterity_mod}" data-i18n="dex-u">DEX</option>
+                      <option value="@{constitution_mod}" data-i18n="con-u">CON</option>
                       <option value="@{intelligence_mod}" data-i18n="int-u">INT</option>
-                      <option value="@{agility_mod}" data-i18n="agl-u">AGL</option>
-                      <option value="@{luck_mod}" data-i18n="luk-u">LUK</option>
+                      <option value="@{wisdom_mod}" data-i18n="wis-u">WIS</option>
+                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{willpower_mod}" data-i18n="wil-u">WIL</option>
                       <option value="0" selected="selected">—</option>
                     </select>
                     <span style="width: 5px">+</span>
@@ -1385,12 +1385,12 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     <span style="width: 5px">+</span>
                     <select name="attr_dmgattr" style="width: 25px">
                       <option value="@{strength_mod}" data-i18n="str-u">STR</option>
-                      <option value="@{perception_mod}" data-i18n="per-u">PER</option>
-                      <option value="@{endurance_mod}" data-i18n="end-u">END</option>
-                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{dexterity_mod}" data-i18n="dex-u">DEX</option>
+                      <option value="@{constitution_mod}" data-i18n="con-u">CON</option>
                       <option value="@{intelligence_mod}" data-i18n="int-u">INT</option>
-                      <option value="@{agility_mod}" data-i18n="agl-u">AGL</option>
-                      <option value="@{luck_mod}" data-i18n="luk-u">LUK</option>
+                      <option value="@{wisdom_mod}" data-i18n="wis-u">WIS</option>
+                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{willpower_mod}" data-i18n="wil-u">WIL</option>
                       <option value="0" selected="selected">—</option>
                     </select>
                     <span style="width: 5px">+</span>
@@ -1422,22 +1422,22 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     <span style="width: 75px;" data-i18n="saving-throw:-u">SAVING THROW:</span>
                     <select style="width: 30px;" name="attr_saveattr">
                       <option value="Strength" selected="selected" data-i18n="str-u">STR</option>
-                      <option value="Perception" data-i18n="per-u">PER</option>
-                      <option value="Endurance" data-i18n="end-u">END</option>
-                      <option value="Charisma" data-i18n="cha-u">CHA</option>
+                      <option value="Dexterity" data-i18n="dex-u">DEX</option>
+                      <option value="Constitution" data-i18n="con-u">CON</option>
                       <option value="Intelligence" data-i18n="int-u">INT</option>
-                      <option value="Agility" data-i18n="agl-u">AGL</option>
-                      <option value="Luck" data-i18n="luk-u">LUK</option>
+                      <option value="Wisdom" data-i18n="wis-u">WIS</option>
+                      <option value="Charisma" data-i18n="cha-u">CHA</option>
+                      <option value="Willpower" data-i18n="wil-u">WIL</option>
                     </select>
                     <span style="width: 35px;" data-i18n="vs-dc:-u">VS DC:</span>
                     <select style="width: 30px;" name="attr_savedc">
                       <option value="(@{strength_mod}+8+@{pb})" data-i18n="str-u">STR</option>
-                      <option value="(@{perception_mod}+8+@{pb})" data-i18n="per-u">PER</option>
-                      <option value="(@{endurance_mod}+8+@{pb})" data-i18n="end-u">END</option>
-                      <option value="(@{charisma_mod}+8+@{pb})" data-i18n="cha-u">CHA</option>
+                      <option value="(@{dexterity_mod}+8+@{pb})" data-i18n="dex-u">DEX</option>
+                      <option value="(@{constitution_mod}+8+@{pb})" data-i18n="con-u">CON</option>
                       <option value="(@{intelligence_mod}+8+@{pb})" data-i18n="int-u">INT</option>
-                      <option value="(@{agility_mod}+8+@{pb})" data-i18n="agl-u">AGL</option>
-                      <option value="(@{luck_mod}+8+@{pb})" data-i18n="agl-u">LUK</option>
+                      <option value="(@{wisdom_mod}+8+@{pb})" data-i18n="wis-u">WIS</option>
+                      <option value="(@{charisma_mod}+8+@{pb})" data-i18n="cha-u">CHA</option>
+                      <option value="(@{willpower_mod}+8+@{pb})" data-i18n="wil-u">WIL</option>
                       <option value="(@{saveflat})" data-i18n="flat-u">FLAT</option>
                     </select>
                     <input class="flatflag" type="hidden" name="attr_savedc">
@@ -1545,12 +1545,12 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     <span style="width: 5px">+</span>
                     <select name="attr_atkattr" style="width: 25px">
                       <option value="@{strength_mod}" selected="selected" data-i18n="str-u">STR</option>
-                      <option value="@{perception_mod}" data-i18n="per-u">PER</option>
-                      <option value="@{endurance_mod}" data-i18n="end-u">END</option>
-                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{dexterity_mod}" data-i18n="dex-u">DEX</option>
+                      <option value="@{constitution_mod}" data-i18n="con-u">CON</option>
                       <option value="@{intelligence_mod}" data-i18n="int-u">INT</option>
-                      <option value="@{agility_mod}" data-i18n="agl-u">AGL</option>
-                      <option value="@{luck_mod}" data-i18n="luk-u">LUK</option>
+                      <option value="@{wisdom_mod}" data-i18n="wis-u">WIS</option>
+                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{willpower_mod}" data-i18n="wil-u">WIL</option>
                       <option value="0" selected="selected">—</option>
                     </select>
                     <span style="width: 5px">+</span>
@@ -1582,12 +1582,12 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     <span style="width: 5px">+</span>
                     <select name="attr_dmgattr" style="width: 25px">
                       <option value="@{strength_mod}" data-i18n="str-u">STR</option>
-                      <option value="@{perception_mod}" data-i18n="per-u">PER</option>
-                      <option value="@{endurance_mod}" data-i18n="end-u">END</option>
-                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{dexterity_mod}" data-i18n="dex-u">DEX</option>
+                      <option value="@{constitution_mod}" data-i18n="con-u">CON</option>
                       <option value="@{intelligence_mod}" data-i18n="int-u">INT</option>
-                      <option value="@{agility_mod}" data-i18n="agl-u">AGL</option>
-                      <option value="@{luck_mod}" data-i18n="luk-u">LUK</option>
+                      <option value="@{wisdom_mod}" data-i18n="wis-u">WIS</option>
+                      <option value="@{charisma_mod}" data-i18n="cha-u">CHA</option>
+                      <option value="@{willpower_mod}" data-i18n="wil-u">WIL</option>
                       <option value="0" selected="selected">—</option>
                     </select>
                     <span style="width: 5px">+</span>
@@ -1652,10 +1652,10 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <div class="header" style="height: auto;">
                 <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/equipped.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
                     alt="equipped symbol"></span>
-                <span style="width: 150px; text-align: left;" data-i18n="armor-name-u">ARMOR NAME</SPAN>
-                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/ac.png" style="width: 15px; margin-bottom: -3px;  vertical-align: inherit;"
+                <span style="width: 154px; text-align: left;" data-i18n="armor-name-u">ARMOR NAME</SPAN>
+                <span style="width: 20px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/ac.png" style="width: 15px; margin-bottom: -3px;  vertical-align: inherit;"
                     alt="AC symbol"></span>
-                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/mr.png" style="width: 15px; margin-bottom: -3px;  vertical-align: inherit;"
+                <span style="width: 24px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/mr.png" style="width: 15px; margin-bottom: -3px;  vertical-align: inherit;"
                     alt="MR symbol"></span>
               </div>
               <input type="hidden" name="attr_equippedclothingid">
@@ -1664,8 +1664,9 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                 <input type="hidden" class="equippedflag" name="attr_equipped" value="0">
                 <div class="item">
                   <input class="equipped" type="checkbox" name="attr_equipped" value="1">
-                  <input class="name" type="text" name="attr_armorname">
-                  <input class="weight" type="text" name="attr_armordt" placeholder="0">
+                  <input class="name" type="text" name="attr_armorname" style="width: 158px;">
+                  <input class="weight" type="text" name="attr_armorac" placeholder="0">
+                  <input class="weight" type="text" name="attr_armormr" placeholder="0">
                   <input class="inventorysubflag" type="checkbox" name="attr_inventorysubflag"><span>y</span>
                   <div class="subitem">
                     <span class="label" data-i18n="type:-u">TYPE:</span>
@@ -1855,7 +1856,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                   <!--ARMOR ATTRIBUTES-->
                   <input type="hidden" name="attr_itemarmorid">
                   <input type="hidden" name="attr_arm_armorname">
-                  <input type="hidden" name="attr_arm_armordt">
+                  <input type="hidden" name="attr_arm_armorac">
                   <input type="hidden" name="attr_arm_type">
                   <input type="hidden" name="attr_arm_armorproperties">
                   <input type="hidden" name="attr_arm_itemmodifiers">
@@ -2168,32 +2169,32 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <span>+</span><input type="text" class="num" name="attr_strength_bonus" value="0" placeholder="0" title="@{strength_bonus}">
             </div>
             <div class="row skill">
-              <span data-i18n="perception-u">PERCEPTION</span>
-              <span>+</span><input type="text" class="num" name="attr_perception_bonus" value="0" placeholder="0" title="@{perception_bonus}">
+              <span data-i18n="dexterity-u">PERCEPTION</span>
+              <span>+</span><input type="text" class="num" name="attr_dexterity_bonus" value="0" placeholder="0" title="@{dexterity_bonus}">
             </div>
             <div class="row skill">
-              <span data-i18n="endurance-u">ENDURANCE</span>
-              <span>+</span><input type="text" class="num" name="attr_endurance_bonus" value="0" placeholder="0" title="@{endurance_bonus}">
+              <span data-i18n="constitution-u">ENDURANCE</span>
+              <span>+</span><input type="text" class="num" name="attr_constitution_bonus" value="0" placeholder="0" title="@{constitution_bonus}">
             </div>
             <div class="row skill">
-              <span data-i18n="charisma-u">CHARISMA</span>
-              <span>+</span><input type="text" class="num" name="attr_charisma_bonus" value="0" placeholder="0" title="@{charisma_bonus}">
-            </div>
-            <div class="row skill">
-              <span data-i18n="intelligence-u">INTELLIGENCE</span>
+              <span data-i18n="intelligence-u">CHARISMA</span>
               <span>+</span><input type="text" class="num" name="attr_intelligence_bonus" value="0" placeholder="0" title="@{intelligence_bonus}">
             </div>
             <div class="row skill">
-              <span data-i18n="agility-u">AGILITY</span>
-              <span>+</span><input type="text" class="num" name="attr_agility_bonus" value="0" placeholder="0" title="@{agility_bonus}">
+              <span data-i18n="wisdom-u">INTELLIGENCE</span>
+              <span>+</span><input type="text" class="num" name="attr_wisdom_bonus" value="0" placeholder="0" title="@{wisdom_bonus}">
             </div>
             <div class="row skill">
-              <span data-i18n="luck-u">LUCK</span>
-              <span>+</span><input type="text" class="num" name="attr_luck_bonus" value="0" placeholder="0" title="@{luck_bonus}">
+              <span data-i18n="charisma-u">AGILITY</span>
+              <span>+</span><input type="text" class="num" name="attr_charisma_bonus" value="0" placeholder="0" title="@{charisma_bonus}">
+            </div>
+            <div class="row skill">
+              <span data-i18n="willpower-u">LUCK</span>
+              <span>+</span><input type="text" class="num" name="attr_willpower_bonus" value="0" placeholder="0" title="@{willpower_bonus}">
             </div>
             <div class="row">
-              <input type="checkbox" name="attr_init_tiebreaker" value="@{agility}/100">
-              <span data-i18n="add-agl-tiebreaker-u">ADD AGL TIEBREAKER TO INITIATIVE</span>
+              <input type="checkbox" name="attr_init_tiebreaker" value="@{charisma}/100">
+              <span data-i18n="add-agl-tiebreaker-u">ADD CHA TIEBREAKER TO INITIATIVE</span>
             </div>
             <div class="row">
               <span data-i18n="initiative-style:-u">INITIATIVE STYLE:</span>
@@ -2228,11 +2229,11 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
           <div class="skill_options" style="width: 234px;">
             <div data-i18n-list="skills-list">
               <div class="row skill" data-i18n-list-item="barter">
-                <span data-i18n="barter-core">Barter <span>[CHA]</span></span>
+                <span data-i18n="barter-core">Barter <span>[INT]</span></span>
                 <span>+</span><input type="text" class="num" name="attr_barter_flat" value="0" placeholder="0" title="@{barter_flat}">
               </div>
               <div class="row skill" data-i18n-list-item="energy_weapons">
-                <span data-i18n="energy_weapons-core">Energy Weapons <span>[PER]</span></span>
+                <span data-i18n="energy_weapons-core">Energy Weapons <span>[DEX]</span></span>
                 <span>+</span><input type="text" class="num" name="attr_energy_weapons_flat" value="0" placeholder="0" title="@{energy_weapons_flat}">
               </div>
               <div class="row skill" data-i18n-list-item="explosives">
@@ -2298,32 +2299,32 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <span>+</span><input type="text" class="num" name="attr_strength_save_mod" value="0" placeholder="0" title="@{strength_save_mod}">
             </div>
             <div class="row skill">
-              <span data-i18n="perception-save-u">Perception Save</span>
-              <span>+</span><input type="text" class="num" name="attr_perception_save_mod" value="0" placeholder="0" title="@{perception_save_mod}">
+              <span data-i18n="dexterity-save-u">Dexterity Save</span>
+              <span>+</span><input type="text" class="num" name="attr_dexterity_save_mod" value="0" placeholder="0" title="@{dexterity_save_mod}">
             </div>
             <div class="row skill">
-              <span data-i18n="endurance-save-u">Endurance Save</span>
-              <span>+</span><input type="text" class="num" name="attr_endurance_save_mod" value="0" placeholder="0" title="@{endurance_save_mod}">
-            </div>
-            <div class="row skill">
-              <span data-i18n="charisma-save-u">Charisma Save</span>
-              <span>+</span><input type="text" class="num" name="attr_charisma_save_mod" value="0" placeholder="0" title="@{charisma_save_mod}">
+              <span data-i18n="constitution-save-u">Constitution Save</span>
+              <span>+</span><input type="text" class="num" name="attr_constitution_save_mod" value="0" placeholder="0" title="@{constitution_save_mod}">
             </div>
             <div class="row skill">
               <span data-i18n="intelligence-save-u">Intelligence Save</span>
               <span>+</span><input type="text" class="num" name="attr_intelligence_save_mod" value="0" placeholder="0" title="@{intelligence_save_mod}">
             </div>
             <div class="row skill">
-              <span data-i18n="agility-save-u">Agility Save</span>
-              <span>+</span><input type="text" class="num" name="attr_agility_save_mod" value="0" placeholder="0" title="@{agility_save_mod}">
+              <span data-i18n="wisdom-save-u">Wisdom Save</span>
+              <span>+</span><input type="text" class="num" name="attr_wisdom_save_mod" value="0" placeholder="0" title="@{wisdom_save_mod}">
             </div>
             <div class="row skill">
-              <span data-i18n="luck-save-u">Luck Save</span>
-              <span>+</span><input type="text" class="num" name="attr_luck_save_mod" value="0" placeholder="0" title="@{luck_save_mod}">
+              <span data-i18n="charisma-save-u">Charisma Save</span>
+              <span>+</span><input type="text" class="num" name="attr_charisma_save_mod" value="0" placeholder="0" title="@{charisma_save_mod}">
+            </div>
+            <div class="row skill">
+              <span data-i18n="willpower-save-u">Willpower Save</span>
+              <span>+</span><input type="text" class="num" name="attr_willpower_save_mod" value="0" placeholder="0" title="@{willpower_save_mod}">
             </div>
             <div class="row">
               <span data-i18n="death-save-mod:-u">DEATH SAVE MODIFIER:</span>
-              <input type="text" class="num" name="attr_death_save_mod" placeholder="@{luck_save_mod}" value="0">
+              <input type="text" class="num" name="attr_death_save_mod" placeholder="@{willpower_save_mod}" value="0">
             </div>
             <div class="row" style="padding-top: 7px;">
               <span data-i18n="glob-saving-mod:-u">GLOBAL SAVING THROW MODIFIER:</span>
@@ -2507,28 +2508,28 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
 <input type="hidden" name="attr_radiation_6" value="">
 
 <input type="hidden" name="attr_strength_mod" value="0">
-<input type="hidden" name="attr_perception_mod" value="0">
-<input type="hidden" name="attr_endurance_mod" value="0">
-<input type="hidden" name="attr_charisma_mod" value="0">
+<input type="hidden" name="attr_dexterity_mod" value="0">
+<input type="hidden" name="attr_constitution_mod" value="0">
 <input type="hidden" name="attr_intelligence_mod" value="0">
-<input type="hidden" name="attr_agility_mod" value="0">
-<input type="hidden" name="attr_luck_mod" value="0">
+<input type="hidden" name="attr_wisdom_mod" value="0">
+<input type="hidden" name="attr_charisma_mod" value="0">
+<input type="hidden" name="attr_willpower_mod" value="0">
 
 <input type="hidden" name="attr_strength_save_bonus" value="0">
-<input type="hidden" name="attr_perception_save_bonus" value="0">
-<input type="hidden" name="attr_endurance_save_bonus" value="0">
-<input type="hidden" name="attr_charisma_save_bonus" value="0">
+<input type="hidden" name="attr_dexterity_save_bonus" value="0">
+<input type="hidden" name="attr_constitution_save_bonus" value="0">
 <input type="hidden" name="attr_intelligence_save_bonus" value="0">
-<input type="hidden" name="attr_agility_save_bonus" value="0">
-<input type="hidden" name="attr_luck_save_bonus" value="0">
+<input type="hidden" name="attr_wisdom_save_bonus" value="0">
+<input type="hidden" name="attr_charisma_save_bonus" value="0">
+<input type="hidden" name="attr_willpower_save_bonus" value="0">
 
 <input type="hidden" name="attr_strength_maximum" value="30">
-<input type="hidden" name="attr_perception_maximum" value="30">
-<input type="hidden" name="attr_endurance_maximum" value="30">
+<input type="hidden" name="attr_dexterity_maximum" value="30">
 <input type="hidden" name="attr_constitution_maximum" value="30">
-<input type="hidden" name="attr_intelligence_maximum" value="30">
-<input type="hidden" name="attr_agility_maximum" value="30">
-<input type="hidden" name="attr_luck_maximum" value="30">
+<input type="hidden" name="attr_constitution_maximum" value="30">
+<input type="hidden" name="attr_wisdom_maximum" value="30">
+<input type="hidden" name="attr_charisma_maximum" value="30">
+<input type="hidden" name="attr_willpower_maximum" value="30">
 
 <input type='hidden' name='attr_barter_bonus' value='0'>
 <input type='hidden' name='attr_energy_weapons_bonus' value='0'>
@@ -3797,23 +3798,23 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     });
   });
 
-  ['strength','perception','endurance','charisma','intelligence','agility','luck'].forEach(attr => {
+  ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
     on(`change:${attr}_base change:${attr}_bonus`, function() {
       update_attr(`${attr}`);
     });
   });
 
-  ['strength','perception','endurance','charisma','intelligence','agility','luck'].forEach(attr => {
+  ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
     on(`change:${attr}`, function() {
       update_mod(`${attr}`);
 
       (attr === "strength") ? update_weight() : false;
-      (attr === "endurance") ? update_hp_max() : false;
-      (attr === "agility") ? update_initiative() : false;
+      (attr === "constitution") ? update_hp_max() : false;
+      (attr === "charisma") ? update_initiative() : false;
     });
   });
 
-  ['strength','perception','endurance','charisma','intelligence','agility','luck'].forEach(attr => {
+  ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
     on(`change:${attr}_mod`, function() {
       update_save(`${attr}`);
       update_attacks(`${attr}`);
@@ -3823,23 +3824,23 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
         case "strength":
           update_skills(["melee_weapons", "unarmed"]);
           break;
-        case "perception":
+        case "dexterity":
           update_skills(["energy_weapons", "guns"]);
           update_passive_perception();
           break;
-        case "intelligence":
+        case "wisdom":
           update_skills(["explosives", "medicine", "repair", "science", "survival"]);
           break;
-        case "charisma":
+        case "intelligence":
           update_skills(["speech", "speech"]);
           break;
-        case "agility":
+        case "charisma":
           update_skills(["lockpick", "sneak"]);
           update_initiative();
           update_defense();
           update_speed();
           break;
-        case "luck":
+        case "willpower":
           update_critical_strike();
         default:
           false;
@@ -3847,7 +3848,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     });
   });
 
-  ['strength','perception','endurance','charisma','intelligence','agility','luck'].forEach(attr => {
+  ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
     on(`change:${attr}_save_prof change:${attr}_save_mod`, function(eventinfo) {
       if(eventinfo.sourceType === "sheetworker") {return;}
       update_save(`${attr}`);
@@ -4190,7 +4191,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     });
   });
 
-  on("change:repeating_armor:armordt change:repeating_armor:equipped", function(eventinfo) {
+  on("change:repeating_armor:armorac change:repeating_armor:equipped", function(eventinfo) {
     console.log("ARMOR AC CHANGE DETECTED!");
     update_ac();
   });
@@ -4253,7 +4254,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     update_npc_saves();
   });
 
-  on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
+  on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_dexterity_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
     update_npc_skills();
   });
 
@@ -4264,12 +4265,12 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     update_npc_action(actionid, legendary);
   });
 
-  on("change:core_die change:halflingluck_flag", function() {
-    getAttrs(["core_die","halflingluck_flag"], function(v) {
+  on("change:core_die change:halflingwillpower_flag", function() {
+    getAttrs(["core_die","halflingwillpower_flag"], function(v) {
       core = v.core_die && v.core_die != "" ? v.core_die : "1d20";
-      luck = v.halflingluck_flag && v.halflingluck_flag === "1" ? "ro<1" : "";
+      willpower = v.halflingwillpower_flag && v.halflingwillpower_flag === "1" ? "ro<1" : "";
       update = {};
-      update["d20"] = core + luck;
+      update["d20"] = core + willpower;
       if(!v.core_die || v.core_die === "") {
           update["core_die"] = "1d20";
       }
@@ -4539,7 +4540,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
             var mod_list = mods.toLowerCase().split(",").concat(prev_mods.toLowerCase().split(","));
             _.each(mod_list, function(mod) {
-              ['strength','perception','endurance','charisma','intelligence','agility','luck','special'].forEach(attr => {
+              ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower','special'].forEach(attr => {
                 if(mod.indexOf(attr) > -1 && mod.indexOf("save") === -1 && mod.indexOf("saving throw") === -1){
                   update_attr_flag = true;
                 }
@@ -4598,7 +4599,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   var update_attr = function(attr) {
     var update = {};
     if (attr === "all") {
-      ['strength','perception','endurance','charisma','intelligence','agility','luck'].forEach(attr => {
+      ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
         update_attr(`${attr}`);
       });
       return;
@@ -4646,7 +4647,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   // TODO implement armor
   var update_save = function (attr) {
     if(attr === "all") {
-      ['strength','perception','endurance','charisma','intelligence','agility','luck'].forEach(attr => {
+      ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
         update_save(`${attr}`);
       });
       return;
@@ -4686,12 +4687,12 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
   var update_all_saves = function() {
     update_save("strength");
-    update_save("perception");
-    update_save("endurance");
-    update_save("charisma");
+    update_save("dexterity");
+    update_save("constitution");
     update_save("intelligence");
-    update_save("agility");
-    update_save("luck");
+    update_save("wisdom");
+    update_save("charisma");
+    update_save("willpower");
     update_save("death");
   };
 
@@ -4702,7 +4703,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
   var update_skills = function (skills_array) {
     console.log("UPDATING SKILLS");
-    var skill_parent = {barter: "charisma", energy_weapons: "perception", explosives: "intelligence", guns: "perception", lockpick: "agility", medicine: "intelligence", melee_weapons: "strength", repair: "intelligence", science: "intelligence", sneak: "agility", speech: "charisma", survival: "intelligence", unarmed: "strength"};
+    var skill_parent = {barter: "intelligence", energy_weapons: "dexterity", explosives: "wisdom", guns: "dexterity", lockpick: "charisma", medicine: "wisdom", melee_weapons: "strength", repair: "wisdom", science: "wisdom", sneak: "charisma", speech: "intelligence", survival: "wisdom", unarmed: "strength"};
     var attrs_to_get = ["pb","global_mods"];
     var update = {};
     var callbacks = [];
@@ -4783,7 +4784,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   };
 
   var do_update_tool = function(tool_array) {
-      var tool_attribs = ["pb","pb_type","jack","strength_mod","perception_mod","endurance_mod","charisma_mod","intelligence_mod","agility_mod","luck_mod"];
+      var tool_attribs = ["pb","pb_type","jack","strength_mod","dexterity_mod","constitution_mod","intelligence_mod","wisdom_mod","charisma_mod","willpower_mod"];
       var update = {};
       _.each(tool_array, function(tool_id) {
           tool_attribs.push("repeating_tool_" + tool_id + "_toolbonus_base");
@@ -4797,7 +4798,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
               var query = false;
               if(v["repeating_tool_" + tool_id + "_toolattr_base"] && v["repeating_tool_" + tool_id + "_toolattr_base"].substring(0,2) === "?{") {
                   update["repeating_tool_" + tool_id + "_toolattr"] = "QUERY";
-                  var mod = "?{Attribute?|Strength,@{strength_mod}|Perception,@{perception_mod}|Endurance,@{endurance_mod}|Charisma,@{charisma_mod}|Intelligence,@{intelligence_mod}|Agility,@{agility_mod}|Luck,@{luck_mod}}";
+                  var mod = "?{Attribute?|Strength,@{strength_mod}|Dexterity,@{dexterity_mod}|Constitution,@{constitution_mod}|Intelligence,@{intelligence_mod}|Wisdom,@{wisdom_mod}|Charisma,@{charisma_mod}|Willpower,@{willpower_mod}}";
                   if(v["repeating_tool_" + tool_id + "_tool_mod"]) {
                       mod = mod + "+" + v["repeating_tool_" + tool_id + "_tool_mod"];
                   }
@@ -4937,12 +4938,12 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       if(mod.indexOf("dt:") > -1 || mod.indexOf("dt +") > -1 || mod.indexOf("dt -") > -1) {update_ac();};
       if(mod.indexOf("saving throws") > -1) {update_all_saves();};
       if(mod.indexOf("strength save") > -1) {update_save("strength");} else if(mod.indexOf("strength") > -1) {update_attr("strength");};
-      if(mod.indexOf("perception save") > -1) {update_save("perception");} else if(mod.indexOf("perception") > -1) {update_attr("perception");};
-      if(mod.indexOf("endurance save") > -1) {update_save("endurance");} else if(mod.indexOf("endurance") > -1) {update_attr("endurance");};
-      if(mod.indexOf("charisma save") > -1) {update_save("charisma");} else if(mod.indexOf("charisma") > -1) {update_attr("charisma");};
+      if(mod.indexOf("dexterity save") > -1) {update_save("dexterity");} else if(mod.indexOf("dexterity") > -1) {update_attr("dexterity");};
+      if(mod.indexOf("constitution save") > -1) {update_save("constitution");} else if(mod.indexOf("constitution") > -1) {update_attr("constitution");};
+      if(mod.indexOf("intelligence save") > -1) {update_save("intelligence");} else if(mod.indexOf("intelligence") > -1) {update_attr("intelligence");};
       if(mod.indexOf("intellligence save") > -1) {update_save("intellligence");} else if(mod.indexOf("intellligence") > -1) {update_attr("intellligence");};
-      if(mod.indexOf("agility save") > -1) {update_save("agility");} else if(mod.indexOf("agility") > -1) {update_attr("agility");};
-      if(mod.indexOf("luck save") > -1) {update_save("luck");} else if(mod.indexOf("luck") > -1) {update_attr("luck");};
+      if(mod.indexOf("charisma save") > -1) {update_save("charisma");} else if(mod.indexOf("charisma") > -1) {update_attr("charisma");};
+      if(mod.indexOf("willpower save") > -1) {update_save("willpower");} else if(mod.indexOf("willpower") > -1) {update_attr("willpower");};
       if(mod.indexOf("ability checks") > -1) {update_all_ability_checks();};
       if(mod.indexOf("barter") > -1) {update_skills(["barter"]);};
       if(mod.indexOf("energy weapons") > -1) {update_skills(["energy_weapons"]);};
@@ -4955,7 +4956,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       if(mod.indexOf("science") > -1) {update_skills(["science"]);};
       if(mod.indexOf("sneak") > -1) {update_skills(["sneak"]);};
       if(mod.indexOf("speech") > -1) {update_skills(["speech"]);};
-      if(mod.indexOf("perception") > -1) {update_skills(["perception"]);};
+      if(mod.indexOf("dexterity") > -1) {update_skills(["dexterity"]);};
       if(mod.indexOf("survival") > -1) {update_skills(["survival"]);};
       if(mod.indexOf("unarmed") > -1) {update_skills(["unarmed"]);};
     });
@@ -5259,7 +5260,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     getAttrs([
       `repeating_inventory_${itemid}_itemname`,
       `repeating_inventory_${itemid}_arm_armorname`,
-      `repeating_inventory_${itemid}_arm_armordt`,
+      `repeating_inventory_${itemid}_arm_armorac`,
       `repeating_inventory_${itemid}_arm_type`,
       `repeating_inventory_${itemid}_arm_armorproperties`,
       `repeating_inventory_${itemid}_arm_itemmodifiers`,
@@ -5276,7 +5277,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
         update[`repeating_armor_${armorid}_armorname`] = attrs[`repeating_inventory_${itemid}_arm_armorname`];
       }
 
-      update[`repeating_armor_${armorid}_armordt`]          = attrs[`repeating_inventory_${itemid}_arm_armordt`];
+      update[`repeating_armor_${armorid}_armorac`]          = attrs[`repeating_inventory_${itemid}_arm_armorac`];
       update[`repeating_armor_${armorid}_type`]             = attrs[`repeating_inventory_${itemid}_arm_type`];
       update[`repeating_armor_${armorid}_armorproperties`]  = attrs[`repeating_inventory_${itemid}_arm_armorproperties`];
       update[`repeating_armor_${armorid}_itemmodifiers`]     = attrs[`repeating_inventory_${itemid}_arm_itemmodifiers`];
@@ -5291,7 +5292,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
     getAttrs([
       `repeating_armor_${armorid}_armorname`,
-      `repeating_armor_${armorid}_armordt`,
+      `repeating_armor_${armorid}_armorac`,
       `repeating_armor_${armorid}_type`,
       `repeating_armor_${armorid}_armorproperties`,
       `repeating_armor_${armorid}_itemmodifiers`,
@@ -5300,7 +5301,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       var update = {};
 
       update[`repeating_inventory_${itemid}_arm_armorname`]        = attrs[`repeating_armor_${armorid}_armorname`];
-      update[`repeating_inventory_${itemid}_arm_armordt`]          = attrs[`repeating_armor_${armorid}_armordt`];
+      update[`repeating_inventory_${itemid}_arm_armorac`]          = attrs[`repeating_armor_${armorid}_armorac`];
       update[`repeating_inventory_${itemid}_arm_type`]             = attrs[`repeating_armor_${armorid}_type`];
       update[`repeating_inventory_${itemid}_arm_armorproperties`]  = attrs[`repeating_armor_${armorid}_armorproperties`];
       update[`repeating_inventory_${itemid}_arm_itemmodifiers`]     = attrs[`repeating_armor_${armorid}_itemmodifiers`];
@@ -5417,7 +5418,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   const update_attacks = (update_id, source) => {
     if (update_id.substring(0,1) === "-" && update_id.length === 20) {
       do_update_attack([update_id], source);
-    } else if(["strength","perception","endurance","charisma","intelligence","agility","luck","all"].indexOf(update_id) > -1) {
+    } else if(["strength","dexterity","constitution","intelligence","wisdom","charisma","willpower","all"].indexOf(update_id) > -1) {
       getSectionIDs("repeating_attack", function(idarray) {
         if(update_id === "all") {
           do_update_attack(idarray);
@@ -5455,7 +5456,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     console.log("UPDATING ATTACK");
     getAttrs(["equippedweaponid"], function(attrs) {
       var weaponid = attrs["equippedweaponid"] ? attrs["equippedweaponid"] : "";
-      var attrs_to_get = ["level","d20","pb","pb_type","pbd_safe","dtype","globalmagicmod","strength_mod","perception_mod","endurance_mod","charisma_mod","intelligence_mod","agility_mod","luck_mod","barter_bonus","energy_weapons_bonus","explosives_bonus","guns_bonus","lockpick_bonus","medicine_bonus","melee_weapons_bonus","repair_bonus","science_bonus","sneak_bonus","speech_bonus","survival_bonus","unarmed_bonus","global_damage_mod_roll","global_damage_mod_crit","critrange","critical_strike"];
+      var attrs_to_get = ["level","d20","pb","pb_type","pbd_safe","dtype","globalmagicmod","strength_mod","dexterity_mod","constitution_mod","intelligence_mod","wisdom_mod","charisma_mod","willpower_mod","barter_bonus","energy_weapons_bonus","explosives_bonus","guns_bonus","lockpick_bonus","medicine_bonus","melee_weapons_bonus","repair_bonus","science_bonus","sneak_bonus","speech_bonus","survival_bonus","unarmed_bonus","global_damage_mod_roll","global_damage_mod_crit","critrange","critical_strike"];
       _.each(attack_array, function(attackid) {
         attrs_to_get.push("repeating_attack_" + attackid + "_activeflag");
         attrs_to_get.push("repeating_attack_" + attackid + "_cooldown");
@@ -6119,7 +6120,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
   var update_hp_max = function() {
     console.log("UPDATING MAX HP!")
-    attrs_to_get = ["level", "endurance", "global_mods"];
+    attrs_to_get = ["level", "constitution", "global_mods"];
     getSectionIDs("repeating_hpmod", function(idArray) {
       _.each(idArray, function(currentId, i) {
         attrs_to_get.push("repeating_hpmod_" + currentId + "_mod");
@@ -6127,7 +6128,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       getAttrs(attrs_to_get, function(hp_attrs) {
         var update = {};
         var hp_base = 30;
-        var endurance = parseInt(hp_attrs["endurance"], 10);
+        var constitution = parseInt(hp_attrs["constitution"], 10);
         var level = parseInt(hp_attrs["level"], 10);
         var hp_mod = 0;
         _.each(idArray, function(currentId, i) {
@@ -6154,7 +6155,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
             };
           });
         }
-        var final_hp_max = hp_base + endurance + level + hp_mod;
+        var final_hp_max = hp_base + constitution + level + hp_mod;
         update["hp_max"] = final_hp_max;
         setAttrs(update, {silent: true});
       });
@@ -6163,7 +6164,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
   var update_defense = function() {
     console.log("UPDATING DEFENSE!");
-    var attrs_to_get = ["equippedarmorid", "agility_mod", "pb", "global_mods"];
+    var attrs_to_get = ["equippedarmorid", "charisma_mod", "pb", "global_mods"];
     getAttrs(attrs_to_get, function(def_attrs){
       var equipped_armor_id = def_attrs["equippedarmorid"];
       attrs_to_get.push("repeating_armor_" + equipped_armor_id + "_type");
@@ -6174,7 +6175,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
         getAttrs(attrs_to_get, function(def_attrs) {
           var update = {};
           var def_base = 10;
-          var agility_mod = parseInt(def_attrs["agility_mod"], 10);
+          var charisma_mod = parseInt(def_attrs["charisma_mod"], 10);
           var pb = parseInt(def_attrs["pb"], 10);
           var armor_mod = 0;
           var def_mod = 0;
@@ -6208,7 +6209,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
               };
             });
           }
-          var final_def = def_base + agility_mod + armor_mod + def_mod + pb;
+          var final_def = def_base + charisma_mod + armor_mod + def_mod + pb;
           final_def = final_def > 0 ? final_def : 0;
           update["def"] = final_def;
           setAttrs(update, {silent: true});
@@ -6227,7 +6228,8 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       getSectionIDs("repeating_armor", function(armor_idarray) {
         _.each(armor_idarray, function(currentID, i) {
           ac_attrs.push("repeating_armor_" + currentID + "_equipped");
-          ac_attrs.push("repeating_armor_" + currentID + "_armordt");
+          ac_attrs.push("repeating_armor_" + currentID + "_armorac");
+          ac_attrs.push("repeating_armor_" + currentID + "_armormr");
           ac_attrs.push("repeating_armor_" + currentID + "_type");
         });
         getAttrs(ac_attrs, function(ac_attrs) {
@@ -6238,8 +6240,8 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
           var final_ac = 0;
           _.each(armor_idarray, function(currentID, i) {
             if(ac_attrs["repeating_armor_" + currentID + "_equipped"] && ac_attrs["repeating_armor_" + currentID + "_equipped"] === "1"
-            && ac_attrs["repeating_armor_" + currentID + "_armordt"] && !isNaN(parseInt(ac_attrs["repeating_armor_" + currentID + "_armordt"], 10))) {
-              armor_ac += parseInt(ac_attrs["repeating_armor_" + currentID + "_armordt"], 10);
+            && ac_attrs["repeating_armor_" + currentID + "_armorac"] && !isNaN(parseInt(ac_attrs["repeating_armor_" + currentID + "_armorac"], 10))) {
+              armor_ac += parseInt(ac_attrs["repeating_armor_" + currentID + "_armorac"], 10);
             }
           });
           _.each(ac_idarray, function(currentID, i) {
@@ -6277,7 +6279,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
   var update_speed = function() {
     console.log("UPDATING SPEED!");
-    attrs_to_get = ["equippedarmorid", "agility_mod", "global_mods"];
+    attrs_to_get = ["equippedarmorid", "dexterity_mod", "global_mods"];
     getAttrs(attrs_to_get, function(a){
       var equipped_armor_id = a["equippedarmorid"];
       attrs_to_get.push("repeating_armor_" + equipped_armor_id + "_type");
@@ -6288,7 +6290,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
         getAttrs(attrs_to_get, function(spd_attrs) {
           var update = {};
           var spd_base = 6;
-          var spd_bonus =  Math.floor(parseInt(spd_attrs["agility_mod"], 10)/2);
+          var spd_bonus =  Math.floor(parseInt(spd_attrs["dexterity_mod"], 10)/2);
           var armor_mod = 0;
           var spd_mod = 0;
           switch(spd_attrs["repeating_armor_" + equipped_armor_id + "_type"]) {
@@ -6328,14 +6330,14 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   };
 
   var update_initiative = function() {
-    var attrs_to_get = ["agility","agility_mod","initmod","init_tiebreaker","pb_type","global_mods"];
+    var attrs_to_get = ["dexterity","dexterity_mod","initmod","init_tiebreaker","pb_type","global_mods"];
     getAttrs(attrs_to_get, function(init_attrs) {
       var update = {};
-      var final_init = parseInt(init_attrs["agility_mod"], 10);
+      var final_init = parseInt(init_attrs["dexterity_mod"], 10);
       if(init_attrs["init_tiebreaker"] && init_attrs["init_tiebreaker"] != 0) {
-        final_init = final_init + (parseInt(init_attrs["agility"], 10)/100);
+        final_init = final_init + (parseInt(init_attrs["dexterity"], 10)/100);
       }
-      if(init_attrs["global_mods"] && init_attrs["rglobal_mods"] != "") {
+      if(init_attrs["global_mods"] && init_attrs["global_mods"] != "") {
         var mods = init_attrs["global_mods"].toLowerCase().split(",");
         _.each(mods, function(mod) {
           if(mod.indexOf("init") > -1 || mod.indexOf("initative") > -1) {
@@ -6429,10 +6431,10 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   };
 
   var update_passive_perception = function() {
-    getAttrs(["pb_type","perception_mod","passive_perception_mod","perception_bonus"], function(attrs) {
+    getAttrs(["pb_type","wisdom_mod","passive_perception_mod","wisdom_bonus"], function(attrs) {
       var pass_per_base = 10;
-      var per_mod = !isNaN(parseInt(attrs["perception_mod"],10)) ? parseInt(attrs["perception_mod"],10) : 0;
-      var final_pass_per = pass_per_base + per_mod;
+      var wis_mod = !isNaN(parseInt(attrs["wisdom_mod"],10)) ? parseInt(attrs["wisdom_mod"],10) : 0;
+      var final_pass_per = pass_per_base + wis_mod;
       if(attrs["passive_perception_mod"]) {
         const operator = attrs["passive_perception_mod"].substring(0,1);
         const value    = attrs["passive_perception_mod"].substring(1);
@@ -6539,10 +6541,10 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   }
 
   var update_critical_strike = function() {
-    getAttrs(["luck_mod","critical_strike_mod","luck_bonus","global_mods"], function(crit_attrs) {
+    getAttrs(["willpower_mod","critical_strike_mod","willpower_bonus","global_mods"], function(crit_attrs) {
       var crit_base = 10;
-      var luk_mod = !isNaN(parseInt(crit_attrs["luck_mod"],10)) ? parseInt(crit_attrs["luck_mod"],10) : 0;
-      var luk_bonus = !isNaN(parseInt(crit_attrs["luck_bonus"],10)) ? parseInt(crit_attrs["luck_bonus"],10) : 0;
+      var luk_mod = !isNaN(parseInt(crit_attrs["willpower_mod"],10)) ? parseInt(crit_attrs["willpower_mod"],10) : 0;
+      var luk_bonus = !isNaN(parseInt(crit_attrs["willpower_bonus"],10)) ? parseInt(crit_attrs["willpower_bonus"],10) : 0;
       var crit_mod_bonus = 0;
       if(crit_attrs["global_mods"] && crit_attrs["global_mods"] != "") {
         var mods = crit_attrs["global_mods"].toLowerCase().split(",");
@@ -6760,7 +6762,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   };
 
   const update_npc_skills = () => {
-    const list = ["npc_acrobatics_base","npc_animal_handling_base","npc_arcana_base","npc_athletics_base","npc_deception_base","npc_history_base","npc_insight_base","npc_intimidation_base","npc_investigation_base","npc_medicine_base","npc_nature_base","npc_perception_base","npc_performance_base","npc_persuasion_base","npc_religion_base","npc_sleight_of_hand_base","npc_stealth_base","npc_survival_base"];
+    const list = ["npc_acrobatics_base","npc_animal_handling_base","npc_arcana_base","npc_athletics_base","npc_deception_base","npc_history_base","npc_insight_base","npc_intimidation_base","npc_investigation_base","npc_medicine_base","npc_nature_base","npc_dexterity_base","npc_performance_base","npc_persuasion_base","npc_religion_base","npc_sleight_of_hand_base","npc_stealth_base","npc_survival_base"];
     const type = "skills";
     update_npc_lists(list, type);
   };
@@ -7147,7 +7149,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   };
 
   var check_l1_mancer = function() {
-    getAttrs(["class", "base_level", "strength_base","dexterity_base","constitution_base","intelligence_base","wisdom_base","charisma_base","l1mancer_status","version","charactermancer_step"], function(v) {
+    getAttrs(["class", "base_level", "strength_base","dexterity_base","constitution_base","wisdom_base","wisdom_base","intelligence_base","l1mancer_status","version","charactermancer_step"], function(v) {
       if(!v["version"] || parseFloat(v["version"]) < 2.2) {
         return;
       }
@@ -7169,7 +7171,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   };
 
   var check_lp_mancer = function() {
-    getAttrs(["class", "base_level", "strength_base","dexterity_base","constitution_base","intelligence_base","wisdom_base","charisma_base","l1mancer_status", "lpmancer_status","version","charactermancer_step"], function(v) {
+    getAttrs(["class", "base_level", "strength_base","dexterity_base","constitution_base","wisdom_base","wisdom_base","intelligence_base","l1mancer_status", "lpmancer_status","version","charactermancer_step"], function(v) {
       if(v["lpmancer_status"] === "active" && v["charactermancer_step"] && v["charactermancer_step"].split("-")[0] == "lp") {
         startCharactermancer(v["charactermancer_step"]);
       }
