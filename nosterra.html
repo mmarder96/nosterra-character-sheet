@@ -246,9 +246,9 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
         <span data-i18n="npc-u">NPC</span>
       </div>
       <div class="row">
-        <input type="checkbox" name="attr_dtype" value="1">
+        <input type="checkbox" name="attr_acype" value="1">
         <span data-i18n="auto-dmg-roll-u">AUTO DAMAGE ROLL</span>
-        <!-- <select class="dtype" name="attr_dtype">
+        <!-- <select class="dtype" name="attr_acype">
           <option value="pick" data-i18n="never-dmg">Don't Auto Roll Damage</option>
           <option value="full" data-i18n="always-dmg">Auto Roll Damage & Crit</option>
         </select> -->
@@ -760,7 +760,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
     <div class="page core">
       <div class="header">
         <div class="name-container">
-          <img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/wild_wasteland_logo.png" style="padding-bottom: 5px; width: 250px" alt="Wild Wasteland Logo">
+          <img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/wild_wasteland_logo.png" style="padding-bottom: 5px; width: 250px" alt="Wild Wasteland Logo">
           <input type="text" name="attr_character_name" style="width: 100%;">
           <span class="label" data-i18n="char-name-u">CHARACTER NAME</span>
         </div>
@@ -1185,14 +1185,14 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <input type="number" name="attr_hp" title="@{hp}" step="1" min="0">
             <span class="label" data-i18n="hp-current-u">CURRENT HIT POINTS</span>
           </div>
-          <div class="def-dt-speed-container">
-            <div class="def">
-              <input class="sheet-no_events" type="text" name="attr_def" title="@{def}">
-              <span class="label pc-def" data-i18n="defense-u">DEFENSE</span>
+          <div class="ac-mr-speed-container">
+            <div class="ac">
+              <input class="sheet-no_events" type="text" name="attr_ac" title="@{dt}">
+              <span class="label pc-ac" data-i18n="ac-u">AC</span>
             </div>
-            <div class="dt">
-              <input class="sheet-no_events" type="text" name="attr_dt" title="@{dt}">
-              <span class="label pc-dt" data-i18n="dt-u">DT</span>
+            <div class="mr">
+              <input class="sheet-no_events" type="text" name="attr_mr" title="@{mr}">
+              <span class="label pc-mr" data-i18n="mr-u">MR</span>
             </div>
             <div class="speed">
               <input class="sheet-no_events" type="text" name="attr_speed" title="@{speed}">
@@ -1230,7 +1230,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <textarea class="simple" name="attr_global_mods"></textarea>
             <div class="complex">
               <div class="top">
-                <span style="width: 20px; padding-left: 5px"><img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/equipped.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
+                <span style="width: 20px; padding-left: 5px"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/equipped.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
                     alt="active symbol"></span>
                 <span style="width: 85px;" data-i18n="name-u">NAME</span>
                 <span style="width: 110px;" data-i18n="mods-u">MODS</span>
@@ -1266,7 +1266,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <input type="hidden" class="warningflag" name="attr_attackswarningflag">
               <div class="header" style="height: auto;">
                 <button type="action" name="act_increment_cooldowns" style="background: transparent; border: none; margin-bottom: -3px;">
-                  <img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/cooldown.png" style="width: 15px;" alt="cooldown symbol"/>
+                  <img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/cooldown.png" style="width: 15px;" alt="cooldown symbol"/>
                 </button>
                 <span class="label" style="width: 95px; text-align: left;" data-i18n="attack-name-u">ATTACK NAME</span>
                 <span class="label" style="width: 30px; text-align: left;" data-i18n="atk-u">ATK</span>
@@ -1484,11 +1484,11 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <input type="hidden" class="warningflag" name="attr_weaponswarningflag">
               <input type="hidden" class="warningflag" name="attr_weaponswarningflag">
               <div class="header" style="height: auto;">
-                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/equipped.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
+                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/equipped.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
                     alt="equipped symbol"></span>
                 <span style="width: 175px; text-align: left;" data-i18n="weapon-name-u">WEAPON NAME</span>
                 <button type="action" name="act_reload" style="background: transparent; border: none;">
-                  <img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/ammo.png" style="width: 15px;" alt="ammo"/>
+                  <img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/ammo.png" style="width: 15px;" alt="ammo"/>
                 </button>
               </div>
               <input type="hidden" name="attr_equippedweaponid">
@@ -1650,11 +1650,11 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                 </span>
               </div>
               <div class="header" style="height: auto;">
-                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/equipped.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
+                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/equipped.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
                     alt="equipped symbol"></span>
                 <span style="width: 175px; text-align: left;" data-i18n="armor-name-u">ARMOR NAME</SPAN>
                 <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/beta/images/dt.png" style="width: 15px; margin-bottom: -3px;  vertical-align: inherit;"
-                    alt="DT symbol"></span>
+                    alt="AC symbol"></span>
               </div>
               <input type="hidden" name="attr_equippedclothingid">
               <input type="hidden" name="attr_equippedarmorid">
@@ -1738,11 +1738,11 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
           <input type="hidden" class="pageflag" name="attr_currpage" value="0">
           <div class="equipment" style="min-height: 541px; width: 95%; padding-left: 5px;">
             <button type="action" name="act_switch_page" class="sheet-nextpage" style="background: transparent; border: none; margin-bottom: -3px;">
-              <img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/next-page.png" style="width: 20px;" alt="next page"/>
+              <img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/next-page.png" style="width: 20px;" alt="next page"/>
             </button>
             <div class="money">
               <div class="coin">
-                <span class="label" style="width: 15px;"><img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/money.png" style="width: 15px; margin-bottom: -4px; vertical-align: inherit;"
+                <span class="label" style="width: 15px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/money.png" style="width: 15px; margin-bottom: -4px; vertical-align: inherit;"
                     alt="money symbol"></span>
                 <input type="text" name="attr_cp" title="@{cp}">
               </div>
@@ -1771,7 +1771,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <div class="header" style="height: auto;">
                 <span class="pictos" style="width: 25px; font-size: 15px;">*</span>
                 <span style="width: 175px; text-align: left;" data-i18n="item-name-u">ITEM NAME</SPAN>
-                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/weight.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
+                <span style="width: 25px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/weight.png" style="width: 15px; margin-bottom: -3px; vertical-align: inherit;"
                     alt="Weight symbol"></span>
               </div>
               <fieldset class="repeating_inventory">
@@ -1883,13 +1883,13 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <div class="complex">
               <div class="money">
                 <div class="coin">
-                  <span class="label" style="width: 15px;"><img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/money.png" style="width: 15px; margin-bottom: -4px; vertical-align: inherit;"
+                  <span class="label" style="width: 15px;"><img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/money.png" style="width: 15px; margin-bottom: -4px; vertical-align: inherit;"
                       alt="money symbol"></span>
                   <input type="text" name="attr_cp" title="@{cp}">
                 </div>
               </div>
               <button type="action" name="act_switch_page" class="sheet-nextpage" style="background: transparent; border: none; margin-bottom: -3px;">
-                <img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/next-page.png" style="width: 20px;" alt="next page"/>
+                <img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/next-page.png" style="width: 20px;" alt="next page"/>
               </button>
               <fieldset class="repeating_traits">
                 <div class="trait">
@@ -1952,7 +1952,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
     <div class="page bio">
       <div class="header">
         <div class="name-container">
-          <img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/wild_wasteland_logo.png" style="padding-bottom: 5px; width: 250px" alt="Wild Wasteland Logo">
+          <img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/wild_wasteland_logo.png" style="padding-bottom: 5px; width: 250px" alt="Wild Wasteland Logo">
           <input type="text" name="attr_character_name" style="width: 100%;">
           <span class="label" data-i18n="char-name-u">CHARACTER NAME</span>
         </div>
@@ -2031,7 +2031,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
     <div class="page options">
       <div class="header">
         <div class="name-container">
-          <img src="https://raw.githubusercontent.com/mmarder96/wild-wasteland-char-sheet/dev/images/wild_wasteland_logo.png" style="padding-bottom: 5px; width: 250px" alt="Wild Wasteland Logo">
+          <img src="https://raw.githubusercontent.com/mmarder96/nosterra-character-sheet/master/images/wild_wasteland_logo.png" style="padding-bottom: 5px; width: 250px" alt="Wild Wasteland Logo">
           <input type="text" name="attr_character_name" style="width: 100%;">
           <span class="label" data-i18n="char-name-u">CHARACTER NAME</span>
         </div>
@@ -2113,9 +2113,9 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <span data-i18n="show-global-attack-field-u">SHOW GLOBAL ATTACK MODIFIER FIELD</span>
             </div>
             <div class="row">
-              <input type="checkbox" name="attr_dtype" value="1">
+              <input type="checkbox" name="attr_acype" value="1">
               <span data-i18n="auto-dmg-roll-u">AUTO DAMAGE ROLL</span>
-              <!-- <select class="dtype" name="attr_dtype">
+              <!-- <select class="dtype" name="attr_acype">
                 <option value="pick" data-i18n="never-roll-dmg">Don't Auto Roll Damage</option>
                 <option value="full" data-i18n="always-roll-dmg">Auto Roll Damage & Crit</option>
               </select> -->
@@ -2379,9 +2379,9 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               </div>
             </fieldset>
             <div class="row">
-              <span data-i18n="dtmods:-u">DT MODIFIERS:</span>
+              <span data-i18n="dtmods:-u">AC MODIFIERS:</span>
             </div>
-            <fieldset class="repeating_dtmod">
+            <fieldset class="repeating_acmod">
               <div style="padding-left: 15px; padding-bottom: 5px;">
                 <span data-i18n="source:-u">SOURCE:</span>
                 <input type="text" name="attr_source" style="width: 100px;">
@@ -3890,8 +3890,8 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     update_defense();
   });
 
-  on("change:repeating_dtmod:mod remove:repeating_dtmod", function() {
-    update_dt();
+  on("change:repeating_acmod:mod remove:repeating_acmod", function() {
+    update_ac();
   });
 
   on("change:repeating_spdmod:mod remove:repeating_spdmod", function() {
@@ -4189,8 +4189,8 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   });
 
   on("change:repeating_armor:armordt change:repeating_armor:equipped", function(eventinfo) {
-    console.log("ARMOR DT CHANGE DETECTED!");
-    update_dt();
+    console.log("ARMOR AC CHANGE DETECTED!");
+    update_ac();
   });
 
   on("change:repeating_armor:itemmodifiers change:repeating_armor:equipped", function(eventinfo) {
@@ -4224,7 +4224,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
   on("change:custom_ac_flag change:custom_ac_base change:custom_ac_part1 change:custom_ac_part2 change:custom_ac_shield", function(eventinfo) {
     if(eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {return;}
-    update_dt();
+    update_ac();
   });
 
   on("change:pb_type change:pb_custom change:tag_skill_mod", function(eventinfo) {
@@ -4319,7 +4319,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
   });
 
   on("change:repeating_acmod remove:repeating_acmod", function(eventinfo) {
-    update_dt();
+    update_ac();
   });
 
   on("change:confirm", function(eventinfo) {
@@ -4507,7 +4507,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
             var update_initiative_flag = false;
             var update_hp_max_flag = false;
             var update_defense_flag = false;
-            var update_dt_flag = false;
+            var update_ac_flag = false;
             var update_speed_flag = false;
             var update_weight_flag = false;
 
@@ -4564,7 +4564,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
               } else if(mod.indexOf("def") > -1) {
                 update_defense_flag = true;
               } else if(mod.indexOf("dt") > -1 || mod.indexOf("damage threshold") > -1) {
-                update_dt_flag = true;
+                update_ac_flag = true;
               } else if(mod.indexOf("spd") > -1 || mod.indexOf("speed") > -1) {
                 update_speed_flag = true;
               } else if(mod.indexOf("wgt") > -1 || mod.indexOf("weight") > -1 || mod.indexOf("capacity") > -1) {
@@ -4582,7 +4582,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
             if(update_initiative_flag){callbacks.push(() => {update_initiative();});}
             if(update_hp_max_flag){callbacks.push(() => {update_hp_max();});}
             if(update_defense_flag){callbacks.push(() => {update_defense();});}
-            if(update_dt_flag){callbacks.push(() => {update_dt();});}
+            if(update_ac_flag){callbacks.push(() => {update_ac();});}
             if(update_speed_flag){callbacks.push(() => {update_speed();});}
             if(update_weight_flag){callbacks.push(() => {update_weight();});}
 
@@ -4871,7 +4871,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
           {name: "savemod", list: ["global_save_name"]},
           {name: "tohitmod", list: ["global_attack_name"]},
           {name: "damagemod", list: ["global_damage_name"]},
-          {name: "acmod", list: ["global_dt_name"]},
+          {name: "acmod", list: ["global_ac_name"]},
           {name: "skillmod", list: ["global_skill_name"]},
           {name: "attack", list: ["atkname", "spellid"]},
           {name: "weapon", list: ["wpnname", "spellid"]},
@@ -4932,7 +4932,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       mods = _.union(mods, prevmods);
     };
     _.each(mods, function(mod) {
-      if(mod.indexOf("dt:") > -1 || mod.indexOf("dt +") > -1 || mod.indexOf("dt -") > -1) {update_dt();};
+      if(mod.indexOf("dt:") > -1 || mod.indexOf("dt +") > -1 || mod.indexOf("dt -") > -1) {update_ac();};
       if(mod.indexOf("saving throws") > -1) {update_all_saves();};
       if(mod.indexOf("strength save") > -1) {update_save("strength");} else if(mod.indexOf("strength") > -1) {update_attr("strength");};
       if(mod.indexOf("perception save") > -1) {update_save("perception");} else if(mod.indexOf("perception") > -1) {update_attr("perception");};
@@ -6215,58 +6215,58 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     });
   };
 
-  var update_dt = function() {
-    console.log("UPDATE DT");
-    var dt_attrs = ["global_mods"];
-    getSectionIDs("repeating_dtmod", function(dt_idarray) {
-      _.each(dt_idarray, function(currentID, i) {
-        dt_attrs.push("repeating_dtmod_" + currentID + "_mod");
+  var update_ac = function() {
+    console.log("UPDATE AC");
+    var ac_attrs = ["global_mods"];
+    getSectionIDs("repeating_acmod", function(ac_idarray) {
+      _.each(ac_idarray, function(currentID, i) {
+        ac_attrs.push("repeating_acmod_" + currentID + "_mod");
       });
       getSectionIDs("repeating_armor", function(armor_idarray) {
         _.each(armor_idarray, function(currentID, i) {
-          dt_attrs.push("repeating_armor_" + currentID + "_equipped");
-          dt_attrs.push("repeating_armor_" + currentID + "_armordt");
-          dt_attrs.push("repeating_armor_" + currentID + "_type");
+          ac_attrs.push("repeating_armor_" + currentID + "_equipped");
+          ac_attrs.push("repeating_armor_" + currentID + "_armordt");
+          ac_attrs.push("repeating_armor_" + currentID + "_type");
         });
-        getAttrs(dt_attrs, function(dt_attrs) {
+        getAttrs(ac_attrs, function(ac_attrs) {
           var update = {};
-          var dt_base = 0;
-          var armor_dt = 0;
-          var dt_mod = 0;
-          var final_dt = 0;
+          var ac_base = 0;
+          var armor_ac = 0;
+          var ac_mod = 0;
+          var final_ac = 0;
           _.each(armor_idarray, function(currentID, i) {
-            if(dt_attrs["repeating_armor_" + currentID + "_equipped"] && dt_attrs["repeating_armor_" + currentID + "_equipped"] === "1"
-            && dt_attrs["repeating_armor_" + currentID + "_armordt"] && !isNaN(parseInt(dt_attrs["repeating_armor_" + currentID + "_armordt"], 10))) {
-              armor_dt += parseInt(dt_attrs["repeating_armor_" + currentID + "_armordt"], 10);
+            if(ac_attrs["repeating_armor_" + currentID + "_equipped"] && ac_attrs["repeating_armor_" + currentID + "_equipped"] === "1"
+            && ac_attrs["repeating_armor_" + currentID + "_armordt"] && !isNaN(parseInt(ac_attrs["repeating_armor_" + currentID + "_armordt"], 10))) {
+              armor_ac += parseInt(ac_attrs["repeating_armor_" + currentID + "_armordt"], 10);
             }
           });
-          _.each(dt_idarray, function(currentID, i) {
-            if(!isNaN(parseInt(dt_attrs["repeating_dtmod_" + currentID + "_mod"], 10))) {
-              dt_mod += parseInt(dt_attrs["repeating_dtmod_" + currentID + "_mod"], 10);
+          _.each(ac_idarray, function(currentID, i) {
+            if(!isNaN(parseInt(ac_attrs["repeating_acmod_" + currentID + "_mod"], 10))) {
+              ac_mod += parseInt(ac_attrs["repeating_acmod_" + currentID + "_mod"], 10);
             }
           });
-          if(dt_attrs["global_mods"] && dt_attrs["global_mods"] != "") {
-            var mods = dt_attrs["global_mods"].toLowerCase().split(",");
+          if(ac_attrs["global_mods"] && ac_attrs["global_mods"] != "") {
+            var mods = ac_attrs["global_mods"].toLowerCase().split(",");
             _.each(mods, function(mod) {
               if(mod.indexOf("dt") > -1 || mod.indexOf("damage threshold") > -1) {
                 if(mod.indexOf(":") > -1) {
                   var new_base = !isNaN(parseInt(mod.replace(/[^0-9]/g, ""), 10)) ? parseInt(mod.replace(/[^0-9]/g, ""), 10) : false;
-                  dt_base = new_base && new_base > dt_base ? new_base : dt_base;
+                  ac_base = new_base && new_base > ac_base ? new_base : ac_base;
                 }
                 else if(mod.indexOf("-") > -1) {
                   var new_mod = !isNaN(parseInt(mod.replace(/[^0-9]/g, ""), 10)) ? parseInt(mod.replace(/[^0-9]/g, ""), 10) : false;
-                  dt_mod = new_mod ? dt_mod - new_mod : dt_mod;
+                  ac_mod = new_mod ? ac_mod - new_mod : ac_mod;
                 }
                 else {
                   var new_mod = !isNaN(parseInt(mod.replace(/[^0-9]/g, ""), 10)) ? parseInt(mod.replace(/[^0-9]/g, ""), 10) : false;
-                  dt_mod = new_mod ? dt_mod + new_mod : dt_mod;
+                  ac_mod = new_mod ? ac_mod + new_mod : ac_mod;
                 }
               };
             });
           }
-          var final_dt = dt_base + armor_dt + dt_mod;
-          final_dt = final_dt > 0 ? final_dt : 0;
-          update["dt"] = final_dt;
+          var final_ac = ac_base + armor_ac + ac_mod;
+          final_ac = final_ac > 0 ? final_ac : 0;
+          update["dt"] = final_ac;
           setAttrs(update, {silent: true});
         });
       });

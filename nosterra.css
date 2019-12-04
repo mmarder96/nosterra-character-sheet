@@ -370,7 +370,7 @@ input[type=radio].sheet-tab-button.sheet-spells + span {
 .sheet-attr-container button[type=roll],
 .sheet-saving-throw button[type=roll],
 .sheet-skill button[type=roll],
-.sheet-def-dt-speed-container button[type=roll],
+.sheet-ac-mr-speed-container button[type=roll],
 .sheet-subcontainer button[type=roll],
 .sheet-npc button[type=roll] {
   background-color: transparent;
@@ -390,7 +390,7 @@ input[type=radio].sheet-tab-button.sheet-spells + span {
 .sheet-attr-container button[type=roll]::before,
 .sheet-saving-throw button[type=roll]::before,
 .sheet-skill button[type=roll]::before,
-.sheet-def-dt-speed-container button[type=roll]::before,
+.sheet-ac-mr-speed-container button[type=roll]::before,
 .sheet-subcontainer button[type=roll]::before,
 .sheet-npc button[type=roll]::before {
   content: "" !important;
@@ -531,7 +531,7 @@ button[type=roll] * {
 .sheet-insp-prof-container .sheet-value input,
 .sheet-saving-throw input[type=text],
 .sheet-skill input[type=text],
-.sheet-def-dt-speed-container input,
+.sheet-ac-mr-speed-container input,
 .sheet-hp input,
 .sheet-exhaustion input,
 .sheet-radiation input,
@@ -617,7 +617,7 @@ button[type=roll] * {
 .sheet-saving-throw-container .sheet-label span,
 .sheet-skills-container .sheet-label span,
 .sheet-textbox-container .sheet-label span,
-.sheet-def-dt-speed-container span.sheet-label,
+.sheet-ac-mr-speed-container span.sheet-label,
 .sheet-hp span,
 .sheet-exhaustion span.sheet-label,
 .sheet-radiation span.sheet-label,
@@ -730,7 +730,7 @@ button[type=roll] * {
   border: none;
 }
 
-.sheet-def-dt-speed-container,
+.sheet-ac-mr-speed-container,
 .sheet-hp,
 .sheet-exhaustion,
 .sheet-radiation,
@@ -744,7 +744,7 @@ button[type=roll] * {
   padding-left: 2px;
 }
 
-.sheet-def-dt-speed-container div {
+.sheet-ac-mr-speed-container div {
   width: 31.45%;
   height: 100%;
   border: 1px solid #666;
@@ -753,11 +753,11 @@ button[type=roll] * {
   vertical-align: top;
 }
 
-.sheet-def-dt-speed-container span.sheet-label {
+.sheet-ac-mr-speed-container span.sheet-label {
   margin-top: 0px;
 }
 
-.sheet-def-dt-speed-container button[type=roll] {
+.sheet-ac-mr-speed-container button[type=roll] {
   display: block;
 }
 
@@ -3669,13 +3669,13 @@ span.sheet-spellconcentration {
   width: 184px;
 }
 
-.lang-es .sheet-def-dt-speed-container div {
+.lang-es .sheet-ac-mr-speed-container div {
   position: relative;
   height: 56px;
 }
 
-.lang-es .sheet-def-dt-speed-container button,
-.lang-es .sheet-def-dt-speed-container .sheet-label {
+.lang-es .sheet-ac-mr-speed-container button,
+.lang-es .sheet-ac-mr-speed-container .sheet-label {
   position: absolute;
   bottom: 0;
 }
@@ -3764,7 +3764,7 @@ span.sheet-spellconcentration {
 .charsheet.lang-cs .sheet-spell .sheet-options span[data-i18n="add-ability-mod-u"],
 .charsheet.lang-cs .sheet-spell .sheet-options span[data-i18n="saving-throw:-u"],
 .charsheet.lang-cs .sheet-spell .sheet-options span[data-i18n="effect:-u"],
-.charsheet.lang-cs .sheet-def-dt-speed-container .sheet-ac > span {
+.charsheet.lang-cs .sheet-ac-mr-speed-container .sheet-ac > span {
   font-size: 8px;
 }
 
