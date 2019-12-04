@@ -13,6 +13,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
 
 <input type="hidden" class="monster_confirm_flag" name="attr_monster_confirm_flag">
 <input type="hidden" class="mancer_confirm_flag" name="attr_mancer_confirm_flag">
+<input type="hidden" class="meme-toggle" name="attr_meme_toggle" value="0">
 
 <div class="licensecontainer compendium-drop-target monsters"> <!-- licensecontainer div open -->
 
@@ -805,7 +806,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <div id="per-container" class="attr-container">
               <button type="roll" name="roll_dexterity"
                 value="@{wtype}&{template:simple} {{rname=^{dexterity-u}}} {{mod=@{dexterity_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{dexterity_mod}@{jack_attr}[DEX]]]}} @{rtype}+@{dexterity_mod}@{jack_attr}[DEX]]]}} @{charname_output}"
-                data-i18n="dexterity-u">PERCEPTION</button>
+                data-i18n="dexterity-u">DEXTERITY</button>
               <span class="attr" name="attr_dexterity_mod" title="@{dexterity_mod}">0</span>
               <div class="attr-mod">
                 <input class="baseattr" type="text" name="attr_dexterity_base" title="@{dexterity}" value="10">
@@ -817,7 +818,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <div id="end-container" class="attr-container">
               <button type="roll" name="roll_constitution"
                 value="@{wtype}&{template:simple} {{rname=^{constitution-u}}} {{mod=@{constitution_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{constitution_mod}@{jack_attr}[CON]]]}} @{rtype}+@{constitution_mod}@{jack_attr}[CON]]]}} @{charname_output}"
-                data-i18n="constitution-u">ENDURANCE</button>
+                data-i18n="constitution-u">CONSTITUTION</button>
               <span class="attr" name="attr_constitution_mod" title="@{constitution_mod}">0</span>
               <div class="attr-mod">
                 <input class="baseattr" type="text" name="attr_constitution_base" title="@{constitution}" value="10">
@@ -829,7 +830,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <div id="cha-container" class="attr-container">
               <button type="roll" name="roll_intelligence"
                 value="@{wtype}&{template:simple} {{rname=^{intelligence-u}}} {{mod=@{intelligence_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{rtype}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{charname_output}"
-                data-i18n="intelligence-u">CHARISMA</button>
+                data-i18n="intelligence-u">INTELLIGENCE</button>
               <span class="attr" name="attr_intelligence_mod" title="@{intelligence_mod}">0</span>
               <div class="attr-mod">
                 <input class="baseattr" type="text" name="attr_intelligence_base" title="@{intelligence}" value="10">
@@ -841,7 +842,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <div id="int-container" class="attr-container">
               <button type="roll" name="roll_wisdom"
                 value="@{wtype}&{template:simple} {{rname=^{wisdom-u}}} {{mod=@{wisdom_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{rtype}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{charname_output}"
-                data-i18n="wisdom-u">INTELLIGENCE</button>
+                data-i18n="wisdom-u">WISDOM</button>
               <span class="attr" name="attr_wisdom_mod" title="@{wisdom_mod}">0</span>
               <div class="attr-mod">
                 <input class="baseattr" type="text" name="attr_wisdom_base" title="@{wisdom}" value="10">
@@ -853,7 +854,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             <div id="agl-container" class="attr-container">
               <button type="roll" name="roll_charisma"
                 value="@{wtype}&{template:simple} {{rname=^{charisma-u}}} {{mod=@{charisma_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{rtype}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{charname_output}"
-                data-i18n="charisma-u">AGILITY</button>
+                data-i18n="charisma-u">CHARISMA</button>
               <span class="attr" name="attr_charisma_mod" title="@{charisma_mod}">0</span>
               <div class="attr-mod">
                 <input class="baseattr" type="text" name="attr_charisma_base" title="@{charisma}" value="10">
@@ -864,7 +865,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             </div>
             <div id="luk-container" class="attr-container">
               <button type="roll" name="roll_willpower" value="@{wtype}&{template:simple} {{rname=^{willpower-u}}} {{mod=@{willpower_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{willpower_mod}@{jack_attr}[WIL]]]}} @{rtype}+@{willpower_mod}@{jack_attr}[WIL]]]}} @{charname_output}"
-                data-i18n="willpower-u">LUCK</button>
+                data-i18n="willpower-u">WILLPOWER</button>
               <span class="attr" name="attr_willpower_mod" title="@{willpower_mod}">0</span>
               <div class="attr-mod">
                 <input class="baseattr" type="text" name="attr_willpower_base" title="@{willpower}" value="10">
@@ -874,7 +875,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               </div>
             </div>
           </div>
-          <div class="skills-saves-container">
+          <!-- <div class="skills-saves-container">
             <div class="insp-prof-container">
               <div class="value">
                 <input type="checkbox" name="attr_inspiration"><span></span>
@@ -1024,7 +1025,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     </div>
                   </div>
                 </fieldset>
-              </div> -->
+              </div>
               <div class="label">
                 <span data-i18n="skills-u">SKILLS</span>
               </div>
@@ -1102,51 +1103,53 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     </div>
                   </div>
                 </fieldset>
-              </div> -->
+              </div>
               <div class="label">
                 <span data-i18n="saving-throws-u">SAVING THROWS</span>
               </div>
             </div>
-          </div>
-          <div class="textbox pibf" style="width: 95%;">
-              <input class="options-flag" type="checkbox" name="attr_options-flag-personality" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-              <div class="options">
-                  <textarea name="attr_personality_traits" style="min-height: 50px; height: 50px;"></textarea>
-              </div>
-              <div class="display">
-                  <span name="attr_personality_traits"></span>
-              </div>
-              <span class="label" data-i18n="personality-traits-u">PERSONALITY TRAITS</span>
-          </div>
-          <div class="textbox pibf" style="width: 95%;">
-              <input class="options-flag" type="checkbox" name="attr_options-flag-ideals" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-              <div class="options">
-                  <textarea name="attr_ideals"></textarea>
-              </div>
-              <div class="display">
-                  <span name="attr_ideals"></span>
-              </div>
-              <span class="label" data-i18n="ideals-u">IDEALS</span>
-          </div>
-          <div class="textbox pibf" style="width: 95%;">
-              <input class="options-flag" type="checkbox" name="attr_options-flag-bonds" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-              <div class="options">
-                  <textarea name="attr_bonds"></textarea>
-              </div>
-              <div class="display">
-                  <span name="attr_bonds"></span>
-              </div>
-              <span class="label" data-i18n="bonds-u">BONDS</span>
-          </div>
-          <div class="textbox pibf" style="width: 95%;">
-              <input class="options-flag" type="checkbox" name="attr_options-flag-flaws" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-              <div class="options">
-                  <textarea name="attr_flaws" style="min-height: 46px; height: 46px;"></textarea>
-              </div>
-              <div class="display">
-                  <span name="attr_flaws"></span>
-              </div>
-              <span class="label" data-i18n="flaws-u">FLAWS</span>
+          </div> -->
+          <div class="character-traits" style="display: inline-block; width: 65%">
+            <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
+                <input class="options-flag" type="checkbox" name="attr_options-flag-personality" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
+                <div class="options">
+                    <textarea name="attr_personality_traits" style="min-height: 50px; height: 50px;"></textarea>
+                </div>
+                <div class="display">
+                    <span name="attr_personality_traits"></span>
+                </div>
+                <span class="label" style="position: absolute; bottom: 0px" data-i18n="personality-traits-u">PERSONALITY TRAITS</span>
+            </div>
+            <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
+                <input class="options-flag" type="checkbox" name="attr_options-flag-ideals" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
+                <div class="options">
+                    <textarea name="attr_ideals"></textarea>
+                </div>
+                <div class="display">
+                    <span name="attr_ideals"></span>
+                </div>
+                <span class="label" style="position: absolute; bottom: 0px" data-i18n="ideals-u">IDEALS</span>
+            </div>
+            <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
+                <input class="options-flag" type="checkbox" name="attr_options-flag-bonds" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
+                <div class="options">
+                    <textarea name="attr_bonds"></textarea>
+                </div>
+                <div class="display">
+                    <span name="attr_bonds"></span>
+                </div>
+                <span class="label" style="position: absolute; bottom: 0px" data-i18n="bonds-u">BONDS</span>
+            </div>
+            <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
+                <input class="options-flag" type="checkbox" name="attr_options-flag-flaws" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
+                <div class="options">
+                    <textarea name="attr_flaws" style="min-height: 46px; height: 46px;"></textarea>
+                </div>
+                <div class="display">
+                    <span name="attr_flaws"></span>
+                </div>
+                <span class="label" style="position: absolute; bottom: 0px" data-i18n="flaws-u">FLAWS</span>
+            </div>
           </div>
         </div>
         <div class="col col2">
@@ -1211,19 +1214,6 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <span class="ex-description" name="attr_exhaustion_6"></span>
             </div>
             <span class="label" data-i18n="exhaustion-u">EXHAUSTION LEVEL</span>
-          </div>
-          <input type="hidden" class="radiation-toggle" name="attr_radiation_toggle" value="0">
-          <div class="radiation" style="position: relative;">
-            <input type="number" name="attr_radiation_level" step="1" min="0" max="10">
-            <div class="ex-descriptions">
-              <span class="ex-description" name="attr_radiation_1" style="font-weight: bold;"></span>
-              <span class="ex-description" name="attr_radiation_2"></span>
-              <span class="ex-description" name="attr_radiation_3"></span>
-              <span class="ex-description" name="attr_radiation_4"></span>
-              <span class="ex-description" name="attr_radiation_5"></span>
-              <span class="ex-description" name="attr_radiation_6"></span>
-            </div>
-            <span class="label" data-i18n="radiation-u">RADIATION LEVEL</span>
           </div>
           <div class="custom_mods">
             <input type="hidden" class="modsflag" name="attr_simplemods" value="0">
@@ -1355,23 +1345,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                       <option value="@{willpower_mod}" data-i18n="wil-u">WIL</option>
                       <option value="0" selected="selected">—</option>
                     </select>
-                    <span style="width: 5px">+</span>
-                    <select name="attr_atkskill" style="width: 70px">
-                      <option value="@{barter_bonus}" data-i18n="barter">Barter</option>
-                      <option value="@{energy_weapons_bonus}" data-i18n="energy_weapons">Energy Weapons</option>
-                      <option value="@{explosives_bonus}" data-i18n="explosives">Explosives</option>
-                      <option value="@{guns_bonus}" data-i18n="guns">Guns</option>
-                      <option value="@{medicine_bonus}" data-i18n="medicine">Lockpick</option>
-                      <option value="@{melee_weapons_bonus}" data-i18n="melee_weapons">Melee Weapons</option>
-                      <option value="@{repair_bonus}" data-i18n="repair">Repair</option>
-                      <option value="@{science_bonus}" data-i18n="science">Science</option>
-                      <option value="@{sneak_bonus}" data-i18n="sneak">Sneak</option>
-                      <option value="@{speech_bonus}" data-i18n="speech">Speech</option>
-                      <option value="@{survival_bonus}" data-i18n="survival">Survival</option>
-                      <option value="@{unarmed_bonus}" data-i18n="unarmed">Unarmed</option>
-                      <option value="@{pb}" data-i18n="tag-bonus">Tag Skill Bonus</option>
-                      <option value="0" selected="selected">—</option>
-                    </select>
+                    <span style="width: 75px"></span>
+                    <input type="hidden" name="attr_atkskill" value="0"/>
 
                     <span style="margin-left: 20px;" data-i18n="range:-u">RANGE:</span>
                     <input class="subfield" type="text" name="attr_atkrange" placeholder="—" style="width: 50px;">
@@ -1393,25 +1368,10 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                       <option value="@{willpower_mod}" data-i18n="wil-u">WIL</option>
                       <option value="0" selected="selected">—</option>
                     </select>
-                    <span style="width: 5px">+</span>
-                    <select name="attr_dmgskill" style="width: 70px">
-                      <option value="@{barter_bonus}" data-i18n="barter">Barter</option>
-                      <option value="@{energy_weapons_bonus}" data-i18n="energy_weapons">Energy Weapons</option>
-                      <option value="@{explosives_bonus}" data-i18n="explosives">Explosives</option>
-                      <option value="@{guns_bonus}" data-i18n="guns">Guns</option>
-                      <option value="@{medicine_bonus}" data-i18n="medicine">Lockpick</option>
-                      <option value="@{melee_weapons_bonus}" data-i18n="melee_weapons">Melee Weapons</option>
-                      <option value="@{repair_bonus}" data-i18n="repair">Repair</option>
-                      <option value="@{science_bonus}" data-i18n="science">Science</option>
-                      <option value="@{sneak_bonus}" data-i18n="sneak">Sneak</option>
-                      <option value="@{speech_bonus}" data-i18n="speech">Speech</option>
-                      <option value="@{survival_bonus}" data-i18n="survival">Survival</option>
-                      <option value="@{unarmed_bonus}" data-i18n="unarmed">Unarmed</option>
-                      <option value="@{pb}" data-i18n="tag-bonus">Tag Skill Bonus</option>
-                      <option value="0" selected="selected">—</option>
-                    </select>
+                    <input type="hidden" name="attr_dmgskill" value="0"/>
                     <span style="width: 5px">+</span>
                     <input class="subfield" type="text" name="attr_dmgroll" placeholder="1d6" style="width: 25px; font-size: 10px;">
+                    <span style="width: 70px"></span>
 
                     <span style="margin-left: 17px;" data-i18n="type:-u">TYPE:</span>
                     <input class ="subfield" type="text" name="attr_dmgtype" placeholder="—" style="width: 50px;">
@@ -1553,23 +1513,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                       <option value="@{willpower_mod}" data-i18n="wil-u">WIL</option>
                       <option value="0" selected="selected">—</option>
                     </select>
-                    <span style="width: 5px">+</span>
-                    <select name="attr_atkskill" style="width: 70px">
-                      <option value="@{barter_bonus}" data-i18n="barter">Barter</option>
-                      <option value="@{energy_weapons_bonus}" data-i18n="energy_weapons">Energy Weapons</option>
-                      <option value="@{explosives_bonus}" data-i18n="explosives">Explosives</option>
-                      <option value="@{guns_bonus}" data-i18n="guns">Guns</option>
-                      <option value="@{medicine_bonus}" data-i18n="medicine">Lockpick</option>
-                      <option value="@{melee_weapons_bonus}" data-i18n="melee_weapons">Melee Weapons</option>
-                      <option value="@{repair_bonus}" data-i18n="repair">Repair</option>
-                      <option value="@{science_bonus}" data-i18n="science">Science</option>
-                      <option value="@{sneak_bonus}" data-i18n="sneak">Sneak</option>
-                      <option value="@{speech_bonus}" data-i18n="speech">Speech</option>
-                      <option value="@{survival_bonus}" data-i18n="survival">Survival</option>
-                      <option value="@{unarmed_bonus}" data-i18n="unarmed">Unarmed</option>
-                      <option value="@{pb}" data-i18n="tag-bonus">Tag Skill Bonus</option>
-                      <option value="0" selected="selected">—</option>
-                    </select>
+                    <span style="width: 75px"></span>
+                    <input type="hidden" name="attr_atkskill" value="0">
 
                     <span style="margin-left: 20px;" data-i18n="range:-u">RANGE:</span>
                     <input class="subfield" type="text" name="attr_atkrange" placeholder="—" style="width: 50px;">
@@ -1591,24 +1536,10 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                       <option value="0" selected="selected">—</option>
                     </select>
                     <span style="width: 5px">+</span>
-                    <select name="attr_dmgskill" style="width: 70px">
-                      <option value="@{barter_bonus}" data-i18n="barter">Barter</option>
-                      <option value="@{energy_weapons_bonus}" data-i18n="energy_weapons">Energy Weapons</option>
-                      <option value="@{explosives_bonus}" data-i18n="explosives">Explosives</option>
-                      <option value="@{guns_bonus}" data-i18n="guns">Guns</option>
-                      <option value="@{medicine_bonus}" data-i18n="medicine">Lockpick</option>
-                      <option value="@{melee_weapons_bonus}" data-i18n="melee_weapons">Melee Weapons</option>
-                      <option value="@{repair_bonus}" data-i18n="repair">Repair</option>
-                      <option value="@{science_bonus}" data-i18n="science">Science</option>
-                      <option value="@{sneak_bonus}" data-i18n="sneak">Sneak</option>
-                      <option value="@{speech_bonus}" data-i18n="speech">Speech</option>
-                      <option value="@{survival_bonus}" data-i18n="survival">Survival</option>
-                      <option value="@{unarmed_bonus}" data-i18n="unarmed">Unarmed</option>
-                      <option value="@{pb}" data-i18n="tag-bonus">Tag Skill Bonus</option>
-                      <option value="0" selected="selected">—</option>
-                    </select>
+                    <input type="hidden" name="attr_dmgskill" value="0"/>
                     <span style="width: 5px">+</span>
                     <input class="subfield" type="text" name="attr_dmgroll" placeholder="1d6" style="width: 25px; font-size: 10px;">
+                    <span style="width: 70px"></span>
 
                     <span style="margin-left: 17px;" data-i18n="type:-u">TYPE:</span>
                     <input class ="subfield" type="text" name="attr_dmgtype" placeholder="—" style="width: 50px;">
@@ -2094,8 +2025,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <span data-i18n="exhaustion-setting-u">SHOW EXHAUSTION TRACKING</span>
             </div>
             <div class="row">
-              <input type="checkbox" name="attr_radiation_toggle" value="1" checked>
-              <span data-i18n="radiation-setting-u">SHOW RADIATION TRACKING</span>
+              <input type="checkbox" name="attr_meme_toggle" value="1">
+              <span>MEME MODE xD</span>
             </div>
             <!-- <div class="row">
               <span data-i18n="core-die-roll:-u">CORE DIE ROLL:</span>
@@ -4022,7 +3953,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     setAttrs(update, {silent: true});
   });
 
-  on("change:radiation_toggle", function(eventinfo) {
+  on("change:sans_toggle", function(eventinfo) {
     if(eventinfo.newValue !== "0") {
       getAttrs(["radiation_level"], function(attrs) {
         if(!attrs.radiation_level || attrs.radiation_level === "") {
