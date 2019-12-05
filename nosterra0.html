@@ -1597,11 +1597,12 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                   <div class="subitem">
                     <span class="label" data-i18n="type:-u">TYPE:</span>
                     <select name="attr_type">
-                      <option value="helmet">Helmet</option>
-                      <option value="curaiss">Curaiss</option>
-                      <option value="gauntlets">Gauntlets</option>
-                      <option value="boots">Boots</option>
-                      <option value="accessory">Accessory</option>
+                      <option value="clothing" data-i18n="clothing">Clothing</option>
+                      <option value="light" data-i18n="light-armor">Light armor</option>
+                      <option value="medium" data-i18n="medium-armor">Medium armor</option>
+                      <option value="heavy" data-i18n="heavy-armor">Heavy armor</option>
+                      <option value="power" data-i18n="power-armor">Power armor</option>
+                      <option value="accessory" data-i18n="accessory">Accessory</option>
                       <option value="none" selected="selected">—</option>
                     </select>
                     <span class="label" data-i18n="prop:-u">PROP:</span>
@@ -3735,44 +3736,43 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
       (attr === "strength") ? update_weight() : false;
       (attr === "constitution") ? update_hp_max() : false;
-      (attr === "dexterity") ? update_initiative() : false;
-      (attr === "dexterity") ? update_speed() : false;
+      (attr === "charisma") ? update_initiative() : false;
     });
   });
 
-  // ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
-  //   on(`change:${attr}_mod`, function() {
-  //     // update_save(`${attr}`);
-  //     update_attacks(`${attr}`);
-  //     // update_tool(`${attr}`);
-  //
-  //     switch(`${attr}`) {
-  //       case "strength":
-  //         update_skills(["melee_weapons", "unarmed"]);
-  //         break;
-  //       case "dexterity":
-  //         update_skills(["energy_weapons", "guns"]);
-  //         update_passive_perception();
-  //         break;
-  //       case "wisdom":
-  //         update_skills(["explosives", "medicine", "repair", "science", "survival"]);
-  //         break;
-  //       case "intelligence":
-  //         update_skills(["speech", "speech"]);
-  //         break;
-  //       case "charisma":
-  //         update_skills(["lockpick", "sneak"]);
-  //         update_initiative();
-  //         update_defense();
-  //         update_speed();
-  //         break;
-  //       case "willpower":
-  //         update_critical_strike();
-  //       default:
-  //         false;
-  //     }
-  //   });
-  // });
+  ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
+    on(`change:${attr}_mod`, function() {
+      update_save(`${attr}`);
+      update_attacks(`${attr}`);
+      update_tool(`${attr}`);
+
+      switch(`${attr}`) {
+        case "strength":
+          update_skills(["melee_weapons", "unarmed"]);
+          break;
+        case "dexterity":
+          update_skills(["energy_weapons", "guns"]);
+          update_passive_perception();
+          break;
+        case "wisdom":
+          update_skills(["explosives", "medicine", "repair", "science", "survival"]);
+          break;
+        case "intelligence":
+          update_skills(["speech", "speech"]);
+          break;
+        case "charisma":
+          update_skills(["lockpick", "sneak"]);
+          update_initiative();
+          update_defense();
+          update_speed();
+          break;
+        case "willpower":
+          update_critical_strike();
+        default:
+          false;
+      }
+    });
+  });
 
   ['strength','dexterity','constitution','intelligence','wisdom','charisma','willpower'].forEach(attr => {
     on(`change:${attr}_save_prof change:${attr}_save_mod`, function(eventinfo) {
@@ -3815,7 +3815,11 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     update_hp_max();
   });
 
-  on("change:repeating_acmod:mod remove:repeating_acmod remove:repeating_armor", function() {
+  on("change:repeating_defmod:mod remove:repeating_defmod", function() {
+    update_defense();
+  });
+
+  on("change:repeating_acmod:mod remove:repeating_acmod", function() {
     update_ac();
   });
 
@@ -4129,11 +4133,11 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
     });
   });
 
-  // on("change:repeating_armor:type", function(eventinfo) {
-  //   console.log("ARMOR TYPE CHANGE DETECTED!");
-  //   if(eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {return;}
-  //   update_defense();
-  // });
+  on("change:repeating_armor:type", function(eventinfo) {
+    console.log("ARMOR TYPE CHANGE DETECTED!");
+    if(eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {return;}
+    update_defense();
+  });
 
   on("change:repeating_inventory:itemmodifiers change:repeating_inventory:equipped", function(eventinfo) {
     console.log("CHANGE REPEATING INVENTORY");
@@ -4484,7 +4488,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
                 update_initiative_flag = true;
               } else if(mod.indexOf("hp") > -1 || mod.indexOf("hit points") > -1 || mod.indexOf("health") > -1) {
                 update_hp_max_flag = true;
-              } else if(mod.indexOf("ac") > -1 || mod.indexOf("armor class") > -1 || mod.indexOf("mr") > -1 || mod.indexOf("magic resistance") > -1) {
+              } else if(mod.indexOf("ac") > -1 || mod.indexOf("armor class") > -1 || (mod.indexOf("mr") > -1 || mod.indexOf("magic resistance") > -1) {
                 update_ac_flag = true;
               } else if(mod.indexOf("spd") > -1 || mod.indexOf("speed") > -1) {
                 update_speed_flag = true;
@@ -4502,6 +4506,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
             if(update_all_saves_flag){callbacks.push(() => {update_all_saves();});}
             if(update_initiative_flag){callbacks.push(() => {update_initiative();});}
             if(update_hp_max_flag){callbacks.push(() => {update_hp_max();});}
+            if(update_defense_flag){callbacks.push(() => {update_defense();});}
             if(update_ac_flag){callbacks.push(() => {update_ac();});}
             if(update_speed_flag){callbacks.push(() => {update_speed();});}
             if(update_weight_flag){callbacks.push(() => {update_weight();});}
@@ -5620,10 +5625,9 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
             }
           }
           atkcritrange = (atkcritrange < wpncritange) ? atkcritrange : wpncritange;
-          var critical_strike2 =  attrs["repeating_attack_" + attackid + "_dmgflag"] && attrs["repeating_attack_" + attackid + "_dmgflag"] && attrs["repeating_attack_" + attackid + "_dmgbase"] && !isNaN(parseInt(attrs["repeating_attack_" + attackid + "_dmgbase"],10)) ? attrs["repeating_attack_" + attackid + "_dmgbase"] : 0;
-          var critical_strike1 =  attrs["repeating_weapons_" + weaponid + "_dmgflag"] && attrs["repeating_weapons_" + weaponid + "_dmgflag"] && attrs["repeating_weapons_" + weaponid + "_dmgbase"] && !isNaN(parseInt(attrs["repeating_weapons_" + weaponid + "_dmgbase"],10)) ? attrs["repeating_weapons_" + weaponid + "_dmgbase"] : 0;
-          var crit2 = attrs["repeating_attack_" + attackid + "_dmgcustcrit"] && attrs["repeating_attack_" + attackid + "_dmgcustcrit"] != "" ? critical_strike2 + " + " + attrs["repeating_attack_" + attackid + "_dmgcustcrit"] : critical_strike2;
-          var crit1 = attrs["repeating_weapons_" + weaponid + "_dmgcustcrit"] && attrs["repeating_weapons_" + weaponid + "_dmgcustcrit"] != "" ? critical_strike1 + " + " + attrs["repeating_weapons_" + weaponid + "_dmgcustcrit"] : critical_strike1;
+          var critical_strike = attrs["critical_strike"] && !isNaN(parseInt(attrs["critical_strike"], 10)) ? attrs["critical_strike"] : 0;
+          var crit1 = attrs["repeating_attack_" + attackid + "_dmgcustcrit"] && attrs["repeating_attack_" + attackid + "_dmgcustcrit"] != "" ? critical_strike + " + " + attrs["repeating_attack_" + attackid + "_dmgcustcrit"] : critical_strike;
+          var crit2 = attrs["repeating_weapons_" + weaponid + "_dmgcustcrit"] && attrs["repeating_weapons_" + weaponid + "_dmgcustcrit"] != "" ? attrs["repeating_weapons_" + weaponid + "_dmgcustcrit"] : 0;
           var r1 = attrs["repeating_attack_" + attackid + "_atkflag"] && attrs["repeating_attack_" + attackid + "_atkflag"] != 0 ? "1d20" : "0d20";
           var r2 = attrs["repeating_attack_" + attackid + "_atkflag"] && attrs["repeating_attack_" + attackid + "_atkflag"] != 0 ? "@{rtype}" : "{{r2=[[0d20";
 
@@ -5993,7 +5997,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       });
       getAttrs(attrs_to_get, function(hp_attrs) {
         var update = {};
-        var hp_base = 50;
+        var hp_base = 30;
         var constitution = parseInt(hp_attrs["constitution"], 10);
         var level = parseInt(hp_attrs["level"], 10);
         var hp_mod = 0;
@@ -6021,7 +6025,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
             };
           });
         }
-        var final_hp_max = hp_base + (constitution * 5) + (level * 5) + hp_mod;
+        var final_hp_max = hp_base + constitution + level + hp_mod;
         update["hp_max"] = final_hp_max;
         setAttrs(update, {silent: true});
       });
