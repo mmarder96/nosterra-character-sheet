@@ -1782,6 +1782,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                   <input type="hidden" name="attr_itemarmorid">
                   <input type="hidden" name="attr_arm_armorname">
                   <input type="hidden" name="attr_arm_armorac">
+                  <input type="hidden" name="attr_arm_armormr">
                   <input type="hidden" name="attr_arm_type">
                   <input type="hidden" name="attr_arm_armorproperties">
                   <input type="hidden" name="attr_arm_itemmodifiers">
@@ -5178,6 +5179,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       `repeating_inventory_${itemid}_itemname`,
       `repeating_inventory_${itemid}_arm_armorname`,
       `repeating_inventory_${itemid}_arm_armorac`,
+      `repeating_inventory_${itemid}_arm_armormr`,
       `repeating_inventory_${itemid}_arm_type`,
       `repeating_inventory_${itemid}_arm_armorproperties`,
       `repeating_inventory_${itemid}_arm_itemmodifiers`,
@@ -5195,6 +5197,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
       }
 
       update[`repeating_armor_${armorid}_armorac`]          = attrs[`repeating_inventory_${itemid}_arm_armorac`];
+      update[`repeating_armor_${armorid}_armormr`]          = attrs[`repeating_inventory_${itemid}_arm_armormr`];
       update[`repeating_armor_${armorid}_type`]             = attrs[`repeating_inventory_${itemid}_arm_type`];
       update[`repeating_armor_${armorid}_armorproperties`]  = attrs[`repeating_inventory_${itemid}_arm_armorproperties`];
       update[`repeating_armor_${armorid}_itemmodifiers`]     = attrs[`repeating_inventory_${itemid}_arm_itemmodifiers`];
@@ -5219,6 +5222,7 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
 
       update[`repeating_inventory_${itemid}_arm_armorname`]        = attrs[`repeating_armor_${armorid}_armorname`];
       update[`repeating_inventory_${itemid}_arm_armorac`]          = attrs[`repeating_armor_${armorid}_armorac`];
+      update[`repeating_inventory_${itemid}_arm_armormr`]          = attrs[`repeating_armor_${armorid}_armormr`];
       update[`repeating_inventory_${itemid}_arm_type`]             = attrs[`repeating_armor_${armorid}_type`];
       update[`repeating_inventory_${itemid}_arm_armorproperties`]  = attrs[`repeating_armor_${armorid}_armorproperties`];
       update[`repeating_inventory_${itemid}_arm_itemmodifiers`]     = attrs[`repeating_armor_${armorid}_itemmodifiers`];
