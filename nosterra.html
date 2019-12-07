@@ -768,7 +768,7 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
               <span class="label" data-i18n="lvl-u">LEVEL</span>
             </div>
             <div class="hlabel-container" style="position: relative;">
-              <input type="number" name="attr_experience" step="1" min="0">
+              <input type="number" name="attr_experience" step="1000" min="0">
               <span class="label" data-i18n="exp-pts-u">EXPERIENCE POINTS</span>
             </div>
           </div>
@@ -1108,8 +1108,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
           <div class="character-traits" style="display: inline-block; width: 65%">
             <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
                 <input class="options-flag" type="checkbox" name="attr_options-flag-personality" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-                <div class="options">
-                    <textarea name="attr_personality_traits" style="min-height: 50px; height: 50px;"></textarea>
+                <div class="options" style="width: 95%; margin-bottom: 10px">
+                    <textarea name="attr_personality_traits" style="min-height: 130px;"></textarea>
                 </div>
                 <div class="display">
                     <span name="attr_personality_traits"></span>
@@ -1118,8 +1118,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             </div>
             <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
                 <input class="options-flag" type="checkbox" name="attr_options-flag-ideals" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-                <div class="options">
-                    <textarea name="attr_ideals"></textarea>
+                <div class="options" style="width: 95%; margin-bottom: 10px">
+                    <textarea name="attr_ideals" style="min-height: 130px;"></textarea>
                 </div>
                 <div class="display">
                     <span name="attr_ideals"></span>
@@ -1128,8 +1128,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             </div>
             <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
                 <input class="options-flag" type="checkbox" name="attr_options-flag-bonds" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-                <div class="options">
-                    <textarea name="attr_bonds"></textarea>
+                <div class="options" style="width: 95%; margin-bottom: 10px">
+                    <textarea name="attr_bonds" style="min-height: 130px;"></textarea>
                 </div>
                 <div class="display">
                     <span name="attr_bonds"></span>
@@ -1138,8 +1138,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
             </div>
             <div class="textbox pibf" style="width: 99%; display: inline-block; min-height: 150px">
                 <input class="options-flag" type="checkbox" name="attr_options-flag-flaws" checked="checked" style="top: 0px;"><span style="top: 0px;">y</span>
-                <div class="options">
-                    <textarea name="attr_flaws" style="min-height: 46px; height: 46px;"></textarea>
+                <div class="options" style="width: 95%; margin-bottom: 10px">
+                    <textarea name="attr_flaws" style="min-height: 130px;"></textarea>
                 </div>
                 <div class="display">
                     <span name="attr_flaws"></span>
@@ -1532,9 +1532,8 @@ $$ |  $$ |$$$$$$\ $$$$$$$  |$$$$$$$  |$$$$$$$$\ $$ | \$$ |      $$ |      $$$$$$
                     </select>
                     <span style="width: 5px">+</span>
                     <input type="hidden" name="attr_dmgskill" value="0"/>
-                    <span style="width: 5px">+</span>
                     <input class="subfield" type="text" name="attr_dmgroll" placeholder="1d6" style="width: 25px; font-size: 10px;">
-                    <span style="width: 70px"></span>
+                    <span style="width: 75px"></span>
 
                     <span style="margin-left: 17px;" data-i18n="type:-u">TYPE:</span>
                     <input class ="subfield" type="text" name="attr_dmgtype" placeholder="—" style="width: 50px;">
@@ -5344,31 +5343,31 @@ $$ |  $$ |$$\   $$ |      $$$  / \$$$ |$$ |  $$ |$$ |  $$ |$$ |\$$\  $$ |      $
         if(update_id === "all") {
           do_update_attack(idarray);
         } else {
-            var attrs_to_get = ["spellcasting_ability"];
+          var attrs_to_get = ["spellcasting_ability"];
+          _.each(idarray, function(id) {
+            attrs_to_get.push("repeating_attack_" + id + "_atkbase");
+            attrs_to_get.push("repeating_attack_" + id + "_dmgattr");
+            attrs_to_get.push("repeating_attack_" + id + "_dmg2attr");
+            attrs_to_get.push("repeating_attack_" + id + "_savedc");
+          });
+          getAttrs(attrs_to_get, function(attrs) {
+            var attr_attack_ids = [];
             _.each(idarray, function(id) {
-              attrs_to_get.push("repeating_attack_" + id + "_atkbase");
-              attrs_to_get.push("repeating_attack_" + id + "_dmgattr");
-              attrs_to_get.push("repeating_attack_" + id + "_dmg2attr");
-              attrs_to_get.push("repeating_attack_" + id + "_savedc");
-            });
-            getAttrs(attrs_to_get, function(attrs) {
-              var attr_attack_ids = [];
-              _.each(idarray, function(id) {
-                if((attrs["repeating_attack_" + id + "_atkbase"]
-                  && attrs["repeating_attack_" + id + "_atkbase"].indexOf(update_id) > -1)
-                  || (attrs["repeating_attack_" + id + "_dmgattr"] && attrs["repeating_attack_" + id + "_dmgattr"].indexOf(update_id) > -1)
-                  || (attrs["repeating_attack_" + id + "_dmg2attr"] && attrs["repeating_attack_" + id + "_dmg2attr"].indexOf(update_id) > -1)
-                  || (attrs["repeating_attack_" + id + "_savedc"] && attrs["repeating_attack_" + id + "_savedc"].indexOf(update_id) > -1)
-                  || (attrs["repeating_attack_" + id + "_savedc"] && attrs["repeating_attack_" + id + "_savedc"] === "(@{spell_save_dc})"
-                  && attrs["spellcasting_ability"] && attrs["spellcasting_ability"].indexOf(update_id) > -1)) {
-                    attr_attack_ids.push(id);
-                }
-              });
-              if(attr_attack_ids.length > 0) {
-                do_update_attack(attr_attack_ids);
+              if((attrs["repeating_attack_" + id + "_atkbase"]
+                && attrs["repeating_attack_" + id + "_atkbase"].indexOf(update_id) > -1)
+                || (attrs["repeating_attack_" + id + "_dmgattr"] && attrs["repeating_attack_" + id + "_dmgattr"].indexOf(update_id) > -1)
+                || (attrs["repeating_attack_" + id + "_dmg2attr"] && attrs["repeating_attack_" + id + "_dmg2attr"].indexOf(update_id) > -1)
+                || (attrs["repeating_attack_" + id + "_savedc"] && attrs["repeating_attack_" + id + "_savedc"].indexOf(update_id) > -1)
+                || (attrs["repeating_attack_" + id + "_savedc"] && attrs["repeating_attack_" + id + "_savedc"] === "(@{spell_save_dc})"
+                && attrs["spellcasting_ability"] && attrs["spellcasting_ability"].indexOf(update_id) > -1)) {
+                  attr_attack_ids.push(id);
               }
             });
-          };
+            if(attr_attack_ids.length > 0) {
+              do_update_attack(attr_attack_ids);
+            }
+          });
+        };
       });
     };
   };

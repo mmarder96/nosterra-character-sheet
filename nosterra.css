@@ -943,7 +943,7 @@ button[type=roll] * {
 }
 
 .sheet-textbox textarea {
-  width: 100%;
+  width: 95%;
   font-size: 10px;
   resize: vertical;
   border: none;
